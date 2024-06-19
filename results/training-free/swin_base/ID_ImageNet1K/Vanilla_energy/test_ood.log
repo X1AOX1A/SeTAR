@@ -1,0 +1,79 @@
+2024-06-16 05:40:20,884 | INFO | argparser.py:195 | print_args | Loading args from config file: /data/CODES/SVD_OOD_public/configs/training_free/swin_base/ID_ImageNet/Vanilla_energy.json
+2024-06-16 05:40:20,884 | INFO | argparser.py:198 | print_args | Config: 
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "test",
+    "batch_size": 384,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "Vanilla_energy",
+    "log_directory": "./results/training-free/swin_base/ID_ImageNet1K/Vanilla_energy",
+    "scorers": [
+        "energy_score"
+    ],
+    "temperature": 1,
+    "recall_level": 0.95,
+    "model_name": "microsoft/swinv2-base-patch4-window16-256",
+    "model_type": "SwinTransformerV2",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": null,
+    "lora_settings": null,
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16
+}
+2024-06-16 05:40:20,885 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 05:40:20,885 | INFO | test_ood.py:30 | run_test_ood | Loading SwinTransformerV2 model: microsoft/swinv2-base-patch4-window16-256...
+2024-06-16 05:40:22,105 | INFO | test_ood.py:39 | run_test_ood | Applying SVD prune to 'None' weights...
+2024-06-16 05:40:22,105 | WARNING | model_hub.py:219 | apply_svd_prune | Niether `lora_settings` nor `target_modules` is provided, lora_svd_init is skipped.
+2024-06-16 05:40:22,243 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 05:40:22,244 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 05:44:12,343 | INFO | model_hub.py:711 | compute_scores | Took 230.1 s to run.
+2024-06-16 05:44:12,434 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 05:44:12,434 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 05:45:02,435 | INFO | model_hub.py:711 | compute_scores | Took 50.0 s to run.
+2024-06-16 05:45:02,487 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - energy_score
+2024-06-16 05:45:02,488 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:45:02,488 | INFO | metrics.py:57 | print_metrics | & 57.52 & 81.60 & 92.86
+2024-06-16 05:45:03,393 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 05:45:03,394 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 05:45:54,910 | INFO | model_hub.py:711 | compute_scores | Took 51.52 s to run.
+2024-06-16 05:45:54,971 | INFO | metrics.py:55 | print_metrics | OOD_Sun - energy_score
+2024-06-16 05:45:54,971 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:45:54,971 | INFO | metrics.py:57 | print_metrics | & 71.98 & 72.93 & 89.33
+2024-06-16 05:45:55,819 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 05:45:55,819 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 05:46:44,020 | INFO | model_hub.py:711 | compute_scores | Took 48.2 s to run.
+2024-06-16 05:46:44,074 | INFO | metrics.py:55 | print_metrics | OOD_Places - energy_score
+2024-06-16 05:46:44,075 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:46:44,075 | INFO | metrics.py:57 | print_metrics | & 76.90 & 68.90 & 87.60
+2024-06-16 05:46:44,856 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 05:46:44,856 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 05:47:13,263 | INFO | model_hub.py:711 | compute_scores | Took 28.41 s to run.
+2024-06-16 05:47:13,314 | INFO | metrics.py:55 | print_metrics | OOD_Texture - energy_score
+2024-06-16 05:47:13,314 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:47:13,314 | INFO | metrics.py:57 | print_metrics | & 53.65 & 80.96 & 95.88
+2024-06-16 05:47:14,087 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for energy_score ############
+2024-06-16 05:47:14,090 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:47:14,092 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  57.52  81.60 92.86
+OOD_Sun          71.98  72.93 89.33
+OOD_Places       76.90  68.90 87.60
+OOD_Texture      53.65  80.96 95.88
+Avg              65.01  76.10 91.42
+2024-06-16 05:47:14,092 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/training-free/swin_base/ID_ImageNet1K/Vanilla_energy/metrics_energy_score_test.csv
+2024-06-16 05:47:14,093 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:47:14,094 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 8.648662
+        OOD_Sun 8.648662
+     OOD_Places 8.648655
+    OOD_Texture 8.648568
+2024-06-16 05:47:14,094 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/training-free/swin_base/ID_ImageNet1K/Vanilla_energy/cutoffs_energy_score_test.csv
+2024-06-16 05:47:14,094 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 6m 53s ############

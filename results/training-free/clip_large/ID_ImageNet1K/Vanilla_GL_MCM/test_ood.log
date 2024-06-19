@@ -1,0 +1,79 @@
+2024-06-16 05:31:09,651 | INFO | argparser.py:195 | print_args | Loading args from config file: /data/CODES/SVD_OOD_public/configs/training_free/clip_large/ID_ImageNet/Vanilla_GL_MCM.json
+2024-06-16 05:31:09,652 | INFO | argparser.py:198 | print_args | Config: 
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "test",
+    "batch_size": 512,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "Vanilla_GL_MCM",
+    "log_directory": "./results/training-free/clip_large/ID_ImageNet1K/Vanilla_GL_MCM",
+    "scorers": [
+        "gl_mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-large-patch14",
+    "model_type": "CLIP",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": null,
+    "lora_settings": null,
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16
+}
+2024-06-16 05:31:09,652 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 05:31:09,652 | INFO | test_ood.py:30 | run_test_ood | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 05:31:10,941 | INFO | test_ood.py:39 | run_test_ood | Applying SVD prune to 'None' weights...
+2024-06-16 05:31:10,941 | WARNING | model_hub.py:219 | apply_svd_prune | Niether `lora_settings` nor `target_modules` is provided, lora_svd_init is skipped.
+2024-06-16 05:31:11,097 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 05:31:11,097 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 05:39:40,555 | INFO | model_hub.py:304 | compute_scores | Took 509.46 s to run.
+2024-06-16 05:39:40,665 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 05:39:40,665 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 05:41:27,274 | INFO | model_hub.py:304 | compute_scores | Took 106.61 s to run.
+2024-06-16 05:41:27,333 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - gl_mcm_score
+2024-06-16 05:41:27,333 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:41:27,333 | INFO | metrics.py:57 | print_metrics | & 29.58 & 94.43 & 98.79
+2024-06-16 05:41:28,182 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 05:41:28,182 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 05:43:15,955 | INFO | model_hub.py:304 | compute_scores | Took 107.77 s to run.
+2024-06-16 05:43:16,013 | INFO | metrics.py:55 | print_metrics | OOD_Sun - gl_mcm_score
+2024-06-16 05:43:16,013 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:43:16,013 | INFO | metrics.py:57 | print_metrics | & 32.54 & 93.35 & 98.40
+2024-06-16 05:43:16,766 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 05:43:16,766 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 05:45:01,005 | INFO | model_hub.py:304 | compute_scores | Took 104.24 s to run.
+2024-06-16 05:45:01,063 | INFO | metrics.py:55 | print_metrics | OOD_Places - gl_mcm_score
+2024-06-16 05:45:01,063 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:45:01,063 | INFO | metrics.py:57 | print_metrics | & 37.18 & 91.43 & 97.91
+2024-06-16 05:45:01,830 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 05:45:01,830 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 05:46:02,430 | INFO | model_hub.py:304 | compute_scores | Took 60.6 s to run.
+2024-06-16 05:46:02,482 | INFO | metrics.py:55 | print_metrics | OOD_Texture - gl_mcm_score
+2024-06-16 05:46:02,482 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:46:02,482 | INFO | metrics.py:57 | print_metrics | & 63.28 & 80.71 & 96.92
+2024-06-16 05:46:03,199 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for gl_mcm_score ############
+2024-06-16 05:46:03,202 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:46:03,203 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  29.58  94.43 98.79
+OOD_Sun          32.54  93.35 98.40
+OOD_Places       37.18  91.43 97.91
+OOD_Texture      63.28  80.71 96.92
+Avg              40.65  89.98 98.00
+2024-06-16 05:46:03,203 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/training-free/clip_large/ID_ImageNet1K/Vanilla_GL_MCM/metrics_gl_mcm_score_test.csv
+2024-06-16 05:46:03,204 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:46:03,205 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.002234
+        OOD_Sun 0.002234
+     OOD_Places 0.002234
+    OOD_Texture 0.002234
+2024-06-16 05:46:03,205 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/training-free/clip_large/ID_ImageNet1K/Vanilla_GL_MCM/cutoffs_gl_mcm_score_test.csv
+2024-06-16 05:46:03,205 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 14m 54s ############

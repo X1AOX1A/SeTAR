@@ -1,0 +1,26 @@
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_VOC",
+    "split": "test",
+    "batch_size": 512,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "Vanilla_MCM",
+    "log_directory": "./results/training-free/clip_large/ID_VOC/Vanilla_MCM",
+    "scorers": [
+        "mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-large-patch14",
+    "model_type": "CLIP",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": null,
+    "lora_settings": null,
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16
+}

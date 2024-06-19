@@ -1,0 +1,45 @@
+2024-06-16 05:46:08,309 | INFO | argparser.py:195 | print_args | Loading args from config file: /data/CODES/SVD_OOD_public/configs/training_free/clip_large/ID_ImageNet/Vanilla_GL_MCM.json
+2024-06-16 05:46:08,310 | INFO | argparser.py:198 | print_args | Config: 
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "test",
+    "batch_size": 512,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "Vanilla_GL_MCM",
+    "log_directory": "./results/training-free/clip_large/ID_ImageNet1K/Vanilla_GL_MCM",
+    "scorers": [
+        "gl_mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-large-patch14",
+    "model_type": "CLIP",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": null,
+    "lora_settings": null,
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16
+}
+2024-06-16 05:46:08,310 | INFO | test_classify.py:121 | run_test_classify | ############ Test Classification ############
+2024-06-16 05:46:08,310 | INFO | test_classify.py:122 | run_test_classify | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 05:46:09,536 | INFO | test_classify.py:131 | run_test_classify | Applying SVD prune to 'None' weights...
+2024-06-16 05:46:09,537 | WARNING | model_hub.py:219 | apply_svd_prune | Niether `lora_settings` nor `target_modules` is provided, lora_svd_init is skipped.
+2024-06-16 05:46:09,544 | INFO | test_classify.py:151 | run_test_classify | ############ ID_ImageNet1K ############
+2024-06-16 05:54:29,243 | INFO | test_classify.py:161 | run_test_classify | Accuracy on ID_ImageNet1K: 70.39
+2024-06-16 05:54:29,244 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Sun ############
+2024-06-16 05:56:11,919 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Sun: 75.81
+2024-06-16 05:56:11,919 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Places ############
+2024-06-16 05:57:51,297 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Places: 46.23
+2024-06-16 05:57:51,298 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Texture ############
+2024-06-16 05:58:49,187 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Texture: 51.54
+2024-06-16 05:58:49,188 | INFO | test_classify.py:164 | run_test_classify | ############ Summary ############
+2024-06-16 05:58:49,188 | INFO | test_classify.py:166 | run_test_classify | Accuracy on ID_ImageNet1K: 70.39
+2024-06-16 05:58:49,188 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Sun: 75.81
+2024-06-16 05:58:49,188 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Places: 46.23
+2024-06-16 05:58:49,188 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Texture: 51.54

@@ -1,0 +1,183 @@
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "val",
+    "batch_size": 100,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "SeTAR+FT",
+    "log_directory": "./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT",
+    "scorers": [
+        "mcm_score",
+        "gl_mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-base-patch16",
+    "model_type": "CLIP",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": "small",
+    "lora_settings": [
+        [
+            "visual",
+            "W_up",
+            11,
+            0.15
+        ],
+        [
+            "visual",
+            "W_up",
+            10,
+            0.15
+        ],
+        [
+            "visual",
+            "W_up",
+            9,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            8,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            7,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            6,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            5,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            4,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            3,
+            0.05
+        ],
+        [
+            "visual",
+            "W_up",
+            2,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            1,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            0,
+            0.15
+        ],
+        [
+            "text",
+            "W_up",
+            11,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            10,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            9,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            8,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            7,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            6,
+            0.25
+        ],
+        [
+            "text",
+            "W_up",
+            5,
+            0.1
+        ],
+        [
+            "text",
+            "W_up",
+            4,
+            0.2
+        ],
+        [
+            "text",
+            "W_up",
+            3,
+            0.05
+        ],
+        [
+            "text",
+            "W_up",
+            2,
+            0.05
+        ],
+        [
+            "text",
+            "W_up",
+            1,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            0,
+            0.2
+        ]
+    ],
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16,
+    "num_train_epochs": 5,
+    "max_train_steps": null,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "momentum": 0.9,
+    "lr_scheduler_type": "cosine",
+    "num_warmup_steps": 0,
+    "locoop_lambda": 0.1,
+    "locoop_top_k": 300,
+    "logging_steps": 1
+}

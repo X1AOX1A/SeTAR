@@ -1,0 +1,321 @@
+2024-06-16 06:15:07,048 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 06:15:07,048 | INFO | test_ood.py:30 | run_test_ood | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 06:15:07,525 | INFO | test_ood.py:39 | run_test_ood | Applying SVD prune to 'small' weights...
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.23.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.22.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.21.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.20.mlp.fc1] [rank(51)=round(full_rank(1024)*rank_ratio(0.05))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.19.mlp.fc1] [rank(154)=round(full_rank(1024)*rank_ratio(0.15))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.18.mlp.fc1] [rank(102)=round(full_rank(1024)*rank_ratio(0.1))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.17.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.16.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.15.mlp.fc1] [rank(51)=round(full_rank(1024)*rank_ratio(0.05))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.14.mlp.fc1] [rank(102)=round(full_rank(1024)*rank_ratio(0.1))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.13.mlp.fc1] [rank(205)=round(full_rank(1024)*rank_ratio(0.2))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.12.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.11.mlp.fc1] [rank(154)=round(full_rank(1024)*rank_ratio(0.15))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.10.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.9.mlp.fc1] [rank(102)=round(full_rank(1024)*rank_ratio(0.1))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.8.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.7.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.6.mlp.fc1] [rank(51)=round(full_rank(1024)*rank_ratio(0.05))]
+2024-06-16 06:15:07,528 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.5.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.4.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.3.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.2.mlp.fc1] [rank(154)=round(full_rank(1024)*rank_ratio(0.15))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.1.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.0.mlp.fc1] [rank(410)=round(full_rank(1024)*rank_ratio(0.4))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.11.mlp.fc1] [rank(269)=round(full_rank(768)*rank_ratio(0.35))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.10.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.9.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.8.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.7.mlp.fc1] [rank(77)=round(full_rank(768)*rank_ratio(0.1))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.6.mlp.fc1] [rank(38)=round(full_rank(768)*rank_ratio(0.05))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.5.mlp.fc1] [rank(269)=round(full_rank(768)*rank_ratio(0.35))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.4.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.3.mlp.fc1] [rank(154)=round(full_rank(768)*rank_ratio(0.2))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.2.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.1.mlp.fc1] [rank(38)=round(full_rank(768)*rank_ratio(0.05))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.0.mlp.fc1] [rank(154)=round(full_rank(768)*rank_ratio(0.2))]
+2024-06-16 06:15:07,529 | INFO | model_hub.py:194 | to_target_modules | lora_settings -> target_modules: 
+{
+    "vision_model.encoder.layers.23.mlp.fc1": 0,
+    "vision_model.encoder.layers.22.mlp.fc1": 0,
+    "vision_model.encoder.layers.21.mlp.fc1": 0,
+    "vision_model.encoder.layers.20.mlp.fc1": 51,
+    "vision_model.encoder.layers.19.mlp.fc1": 154,
+    "vision_model.encoder.layers.18.mlp.fc1": 102,
+    "vision_model.encoder.layers.17.mlp.fc1": 0,
+    "vision_model.encoder.layers.16.mlp.fc1": 0,
+    "vision_model.encoder.layers.15.mlp.fc1": 51,
+    "vision_model.encoder.layers.14.mlp.fc1": 102,
+    "vision_model.encoder.layers.13.mlp.fc1": 205,
+    "vision_model.encoder.layers.12.mlp.fc1": 0,
+    "vision_model.encoder.layers.11.mlp.fc1": 154,
+    "vision_model.encoder.layers.10.mlp.fc1": 0,
+    "vision_model.encoder.layers.9.mlp.fc1": 102,
+    "vision_model.encoder.layers.8.mlp.fc1": 0,
+    "vision_model.encoder.layers.7.mlp.fc1": 0,
+    "vision_model.encoder.layers.6.mlp.fc1": 51,
+    "vision_model.encoder.layers.5.mlp.fc1": 0,
+    "vision_model.encoder.layers.4.mlp.fc1": 0,
+    "vision_model.encoder.layers.3.mlp.fc1": 0,
+    "vision_model.encoder.layers.2.mlp.fc1": 154,
+    "vision_model.encoder.layers.1.mlp.fc1": 0,
+    "vision_model.encoder.layers.0.mlp.fc1": 410,
+    "text_model.encoder.layers.11.mlp.fc1": 269,
+    "text_model.encoder.layers.10.mlp.fc1": 0,
+    "text_model.encoder.layers.9.mlp.fc1": 0,
+    "text_model.encoder.layers.8.mlp.fc1": 0,
+    "text_model.encoder.layers.7.mlp.fc1": 77,
+    "text_model.encoder.layers.6.mlp.fc1": 38,
+    "text_model.encoder.layers.5.mlp.fc1": 269,
+    "text_model.encoder.layers.4.mlp.fc1": 0,
+    "text_model.encoder.layers.3.mlp.fc1": 154,
+    "text_model.encoder.layers.2.mlp.fc1": 0,
+    "text_model.encoder.layers.1.mlp.fc1": 38,
+    "text_model.encoder.layers.0.mlp.fc1": 154
+}
+2024-06-16 06:15:07,531 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.23.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,531 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.22.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,531 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.21.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,534 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.20.mlp.fc1] [Rank: 51]
+2024-06-16 06:15:07,541 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.19.mlp.fc1] [Rank: 154]
+2024-06-16 06:15:07,545 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.18.mlp.fc1] [Rank: 102]
+2024-06-16 06:15:07,545 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.17.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,545 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.16.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,548 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.15.mlp.fc1] [Rank: 51]
+2024-06-16 06:15:07,552 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.14.mlp.fc1] [Rank: 102]
+2024-06-16 06:15:07,561 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.13.mlp.fc1] [Rank: 205]
+2024-06-16 06:15:07,561 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.12.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,568 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.11.mlp.fc1] [Rank: 154]
+2024-06-16 06:15:07,568 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.10.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,572 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.9.mlp.fc1] [Rank: 102]
+2024-06-16 06:15:07,572 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.8.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,572 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.7.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,575 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.6.mlp.fc1] [Rank: 51]
+2024-06-16 06:15:07,575 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.5.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,575 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.4.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,575 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.3.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,582 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.2.mlp.fc1] [Rank: 154]
+2024-06-16 06:15:07,582 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.1.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,599 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.0.mlp.fc1] [Rank: 410]
+2024-06-16 06:15:07,608 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.11.mlp.fc1] [Rank: 269]
+2024-06-16 06:15:07,608 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.10.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,608 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.9.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,608 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.8.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,611 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.7.mlp.fc1] [Rank: 77]
+2024-06-16 06:15:07,613 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.6.mlp.fc1] [Rank: 38]
+2024-06-16 06:15:07,621 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.5.mlp.fc1] [Rank: 269]
+2024-06-16 06:15:07,622 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.4.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,627 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.3.mlp.fc1] [Rank: 154]
+2024-06-16 06:15:07,627 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.2.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:15:07,628 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.1.mlp.fc1] [Rank: 38]
+2024-06-16 06:15:07,634 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.0.mlp.fc1] [Rank: 154]
+2024-06-16 06:15:08,447 | INFO | model.py:192 | svd_init | SVD initialized for adapter 'default'.
+2024-06-16 06:15:08,614 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 06:15:08,614 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 06:23:35,374 | INFO | model_hub.py:304 | compute_scores | Took 506.76 s to run.
+2024-06-16 06:23:35,545 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 06:23:35,545 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 06:25:22,219 | INFO | model_hub.py:304 | compute_scores | Took 106.67 s to run.
+2024-06-16 06:25:22,292 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - mcm_score
+2024-06-16 06:25:22,292 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:25:22,292 | INFO | metrics.py:57 | print_metrics | & 26.96 & 95.14 & 98.97
+2024-06-16 06:25:23,082 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - gl_mcm_score
+2024-06-16 06:25:23,082 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:25:23,082 | INFO | metrics.py:57 | print_metrics | & 30.96 & 94.04 & 98.68
+2024-06-16 06:25:23,827 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 06:25:23,828 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 06:27:11,187 | INFO | model_hub.py:304 | compute_scores | Took 107.36 s to run.
+2024-06-16 06:27:11,257 | INFO | metrics.py:55 | print_metrics | OOD_Sun - mcm_score
+2024-06-16 06:27:11,257 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:27:11,257 | INFO | metrics.py:57 | print_metrics | & 27.12 & 94.54 & 98.77
+2024-06-16 06:27:11,954 | INFO | metrics.py:55 | print_metrics | OOD_Sun - gl_mcm_score
+2024-06-16 06:27:11,954 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:27:11,954 | INFO | metrics.py:57 | print_metrics | & 28.72 & 94.08 & 98.60
+2024-06-16 06:27:12,688 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 06:27:12,688 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 06:28:56,209 | INFO | model_hub.py:304 | compute_scores | Took 103.52 s to run.
+2024-06-16 06:28:56,279 | INFO | metrics.py:55 | print_metrics | OOD_Places - mcm_score
+2024-06-16 06:28:56,279 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:28:56,279 | INFO | metrics.py:57 | print_metrics | & 32.04 & 92.55 & 98.18
+2024-06-16 06:28:56,966 | INFO | metrics.py:55 | print_metrics | OOD_Places - gl_mcm_score
+2024-06-16 06:28:56,966 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:28:56,966 | INFO | metrics.py:57 | print_metrics | & 34.58 & 91.89 & 98.00
+2024-06-16 06:28:57,634 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 06:28:57,634 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 06:29:57,076 | INFO | model_hub.py:304 | compute_scores | Took 59.44 s to run.
+2024-06-16 06:29:57,138 | INFO | metrics.py:55 | print_metrics | OOD_Texture - mcm_score
+2024-06-16 06:29:57,138 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:29:57,138 | INFO | metrics.py:57 | print_metrics | & 58.90 & 85.45 & 97.94
+2024-06-16 06:29:58,015 | INFO | metrics.py:55 | print_metrics | OOD_Texture - gl_mcm_score
+2024-06-16 06:29:58,016 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 06:29:58,016 | INFO | metrics.py:57 | print_metrics | & 63.90 & 80.89 & 97.04
+2024-06-16 06:29:58,716 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for mcm_score ############
+2024-06-16 06:29:58,719 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 06:29:58,720 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  26.96  95.14 98.97
+OOD_Sun          27.12  94.54 98.77
+OOD_Places       32.04  92.55 98.18
+OOD_Texture      58.90  85.45 97.94
+Avg              36.26  91.92 98.46
+2024-06-16 06:29:58,720 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/training-free/clip_large/ID_ImageNet1K/SeTAR/metrics_mcm_score_test.csv
+2024-06-16 06:29:58,721 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 06:29:58,722 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.001103
+        OOD_Sun 0.001103
+     OOD_Places 0.001103
+    OOD_Texture 0.001103
+2024-06-16 06:29:58,722 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/training-free/clip_large/ID_ImageNet1K/SeTAR/cutoffs_mcm_score_test.csv
+2024-06-16 06:29:58,722 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for gl_mcm_score ############
+2024-06-16 06:29:58,724 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 06:29:58,725 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  30.96  94.04 98.68
+OOD_Sun          28.72  94.08 98.60
+OOD_Places       34.58  91.89 98.00
+OOD_Texture      63.90  80.89 97.04
+Avg              39.54  90.22 98.08
+2024-06-16 06:29:58,725 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/training-free/clip_large/ID_ImageNet1K/SeTAR/metrics_gl_mcm_score_test.csv
+2024-06-16 06:29:58,726 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 06:29:58,726 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.002234
+        OOD_Sun 0.002234
+     OOD_Places 0.002234
+    OOD_Texture 0.002234
+2024-06-16 06:29:58,726 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/training-free/clip_large/ID_ImageNet1K/SeTAR/cutoffs_gl_mcm_score_test.csv
+2024-06-16 06:29:58,726 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 14m 52s ############
+2024-06-16 06:29:58,727 | INFO | test_classify.py:121 | run_test_classify | ############ Test Classification ############
+2024-06-16 06:29:58,727 | INFO | test_classify.py:122 | run_test_classify | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 06:29:59,208 | INFO | test_classify.py:131 | run_test_classify | Applying SVD prune to 'small' weights...
+2024-06-16 06:29:59,211 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.23.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,211 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.22.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.21.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.20.mlp.fc1] [rank(51)=round(full_rank(1024)*rank_ratio(0.05))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.19.mlp.fc1] [rank(154)=round(full_rank(1024)*rank_ratio(0.15))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.18.mlp.fc1] [rank(102)=round(full_rank(1024)*rank_ratio(0.1))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.17.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.16.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.15.mlp.fc1] [rank(51)=round(full_rank(1024)*rank_ratio(0.05))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.14.mlp.fc1] [rank(102)=round(full_rank(1024)*rank_ratio(0.1))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.13.mlp.fc1] [rank(205)=round(full_rank(1024)*rank_ratio(0.2))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.12.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.11.mlp.fc1] [rank(154)=round(full_rank(1024)*rank_ratio(0.15))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.10.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.9.mlp.fc1] [rank(102)=round(full_rank(1024)*rank_ratio(0.1))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.8.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.7.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.6.mlp.fc1] [rank(51)=round(full_rank(1024)*rank_ratio(0.05))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.5.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.4.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.3.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.2.mlp.fc1] [rank(154)=round(full_rank(1024)*rank_ratio(0.15))]
+2024-06-16 06:29:59,212 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.1.mlp.fc1] [rank(0)=round(full_rank(1024)*rank_ratio(0))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.0.mlp.fc1] [rank(410)=round(full_rank(1024)*rank_ratio(0.4))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.11.mlp.fc1] [rank(269)=round(full_rank(768)*rank_ratio(0.35))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.10.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.9.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.8.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.7.mlp.fc1] [rank(77)=round(full_rank(768)*rank_ratio(0.1))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.6.mlp.fc1] [rank(38)=round(full_rank(768)*rank_ratio(0.05))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.5.mlp.fc1] [rank(269)=round(full_rank(768)*rank_ratio(0.35))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.4.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.3.mlp.fc1] [rank(154)=round(full_rank(768)*rank_ratio(0.2))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.2.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.1.mlp.fc1] [rank(38)=round(full_rank(768)*rank_ratio(0.05))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.0.mlp.fc1] [rank(154)=round(full_rank(768)*rank_ratio(0.2))]
+2024-06-16 06:29:59,213 | INFO | model_hub.py:194 | to_target_modules | lora_settings -> target_modules: 
+{
+    "vision_model.encoder.layers.23.mlp.fc1": 0,
+    "vision_model.encoder.layers.22.mlp.fc1": 0,
+    "vision_model.encoder.layers.21.mlp.fc1": 0,
+    "vision_model.encoder.layers.20.mlp.fc1": 51,
+    "vision_model.encoder.layers.19.mlp.fc1": 154,
+    "vision_model.encoder.layers.18.mlp.fc1": 102,
+    "vision_model.encoder.layers.17.mlp.fc1": 0,
+    "vision_model.encoder.layers.16.mlp.fc1": 0,
+    "vision_model.encoder.layers.15.mlp.fc1": 51,
+    "vision_model.encoder.layers.14.mlp.fc1": 102,
+    "vision_model.encoder.layers.13.mlp.fc1": 205,
+    "vision_model.encoder.layers.12.mlp.fc1": 0,
+    "vision_model.encoder.layers.11.mlp.fc1": 154,
+    "vision_model.encoder.layers.10.mlp.fc1": 0,
+    "vision_model.encoder.layers.9.mlp.fc1": 102,
+    "vision_model.encoder.layers.8.mlp.fc1": 0,
+    "vision_model.encoder.layers.7.mlp.fc1": 0,
+    "vision_model.encoder.layers.6.mlp.fc1": 51,
+    "vision_model.encoder.layers.5.mlp.fc1": 0,
+    "vision_model.encoder.layers.4.mlp.fc1": 0,
+    "vision_model.encoder.layers.3.mlp.fc1": 0,
+    "vision_model.encoder.layers.2.mlp.fc1": 154,
+    "vision_model.encoder.layers.1.mlp.fc1": 0,
+    "vision_model.encoder.layers.0.mlp.fc1": 410,
+    "text_model.encoder.layers.11.mlp.fc1": 269,
+    "text_model.encoder.layers.10.mlp.fc1": 0,
+    "text_model.encoder.layers.9.mlp.fc1": 0,
+    "text_model.encoder.layers.8.mlp.fc1": 0,
+    "text_model.encoder.layers.7.mlp.fc1": 77,
+    "text_model.encoder.layers.6.mlp.fc1": 38,
+    "text_model.encoder.layers.5.mlp.fc1": 269,
+    "text_model.encoder.layers.4.mlp.fc1": 0,
+    "text_model.encoder.layers.3.mlp.fc1": 154,
+    "text_model.encoder.layers.2.mlp.fc1": 0,
+    "text_model.encoder.layers.1.mlp.fc1": 38,
+    "text_model.encoder.layers.0.mlp.fc1": 154
+}
+2024-06-16 06:29:59,215 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.23.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,215 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.22.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,215 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.21.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,219 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.20.mlp.fc1] [Rank: 51]
+2024-06-16 06:29:59,225 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.19.mlp.fc1] [Rank: 154]
+2024-06-16 06:29:59,230 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.18.mlp.fc1] [Rank: 102]
+2024-06-16 06:29:59,230 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.17.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,230 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.16.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,233 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.15.mlp.fc1] [Rank: 51]
+2024-06-16 06:29:59,238 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.14.mlp.fc1] [Rank: 102]
+2024-06-16 06:29:59,246 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.13.mlp.fc1] [Rank: 205]
+2024-06-16 06:29:59,246 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.12.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,253 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.11.mlp.fc1] [Rank: 154]
+2024-06-16 06:29:59,253 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.10.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,257 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.9.mlp.fc1] [Rank: 102]
+2024-06-16 06:29:59,258 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.8.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,258 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.7.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,260 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.6.mlp.fc1] [Rank: 51]
+2024-06-16 06:29:59,260 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.5.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,260 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.4.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,260 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.3.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,267 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.2.mlp.fc1] [Rank: 154]
+2024-06-16 06:29:59,267 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.1.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,285 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.0.mlp.fc1] [Rank: 410]
+2024-06-16 06:29:59,293 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.11.mlp.fc1] [Rank: 269]
+2024-06-16 06:29:59,293 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.10.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,293 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.9.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,293 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.8.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,296 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.7.mlp.fc1] [Rank: 77]
+2024-06-16 06:29:59,298 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.6.mlp.fc1] [Rank: 38]
+2024-06-16 06:29:59,306 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.5.mlp.fc1] [Rank: 269]
+2024-06-16 06:29:59,306 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.4.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,312 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.3.mlp.fc1] [Rank: 154]
+2024-06-16 06:29:59,312 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.2.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 06:29:59,313 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.1.mlp.fc1] [Rank: 38]
+2024-06-16 06:29:59,318 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.0.mlp.fc1] [Rank: 154]
+2024-06-16 06:30:00,158 | INFO | model.py:192 | svd_init | SVD initialized for adapter 'default'.
+2024-06-16 06:30:00,191 | INFO | test_classify.py:151 | run_test_classify | ############ ID_ImageNet1K ############
+2024-06-16 06:38:17,614 | INFO | test_classify.py:161 | run_test_classify | Accuracy on ID_ImageNet1K: 70.10
+2024-06-16 06:38:17,615 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Sun ############
+2024-06-16 06:40:00,262 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Sun: 75.17
+2024-06-16 06:40:00,262 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Places ############
+2024-06-16 06:41:39,371 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Places: 46.49
+2024-06-16 06:41:39,371 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Texture ############
+2024-06-16 06:42:36,729 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Texture: 51.03
+2024-06-16 06:42:36,729 | INFO | test_classify.py:164 | run_test_classify | ############ Summary ############
+2024-06-16 06:42:36,729 | INFO | test_classify.py:166 | run_test_classify | Accuracy on ID_ImageNet1K: 70.10
+2024-06-16 06:42:36,729 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Sun: 75.17
+2024-06-16 06:42:36,729 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Places: 46.49
+2024-06-16 06:42:36,730 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Texture: 51.03

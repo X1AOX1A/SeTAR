@@ -1,0 +1,441 @@
+2024-06-16 05:00:47,526 | INFO | argparser.py:195 | print_args | Loading args from config file: configs/finetune/clip_base/ID_ImageNet1K/SeTAR+FT.json
+2024-06-16 05:00:47,526 | INFO | argparser.py:198 | print_args | Config: 
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "val",
+    "batch_size": 100,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "SeTAR+FT",
+    "log_directory": "./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT",
+    "scorers": [
+        "mcm_score",
+        "gl_mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-base-patch16",
+    "model_type": "CLIP",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": "small",
+    "lora_settings": [
+        [
+            "visual",
+            "W_up",
+            11,
+            0.15
+        ],
+        [
+            "visual",
+            "W_up",
+            10,
+            0.15
+        ],
+        [
+            "visual",
+            "W_up",
+            9,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            8,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            7,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            6,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            5,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            4,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            3,
+            0.05
+        ],
+        [
+            "visual",
+            "W_up",
+            2,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            1,
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            0,
+            0.15
+        ],
+        [
+            "text",
+            "W_up",
+            11,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            10,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            9,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            8,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            7,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            6,
+            0.25
+        ],
+        [
+            "text",
+            "W_up",
+            5,
+            0.1
+        ],
+        [
+            "text",
+            "W_up",
+            4,
+            0.2
+        ],
+        [
+            "text",
+            "W_up",
+            3,
+            0.05
+        ],
+        [
+            "text",
+            "W_up",
+            2,
+            0.05
+        ],
+        [
+            "text",
+            "W_up",
+            1,
+            0
+        ],
+        [
+            "text",
+            "W_up",
+            0,
+            0.2
+        ]
+    ],
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16,
+    "num_train_epochs": 5,
+    "max_train_steps": null,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "momentum": 0.9,
+    "lr_scheduler_type": "cosine",
+    "num_warmup_steps": 0,
+    "locoop_lambda": 0.1,
+    "locoop_top_k": 300,
+    "logging_steps": 1
+}
+2024-06-16 05:00:47,695 | WARNING | other.py:349 | check_os_kernel | Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+2024-06-16 05:00:47,697 | INFO | finetune.py:35 | run_finetune | Loading CLIP model: openai/clip-vit-base-patch16...
+2024-06-16 05:00:48,972 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.11.mlp.fc1] [rank(115)=round(full_rank(768)*rank_ratio(0.15))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.10.mlp.fc1] [rank(115)=round(full_rank(768)*rank_ratio(0.15))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.9.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.8.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.7.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.6.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.5.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.4.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.3.mlp.fc1] [rank(38)=round(full_rank(768)*rank_ratio(0.05))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.2.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.1.mlp.fc1] [rank(0)=round(full_rank(768)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [vision_model.encoder.layers.0.mlp.fc1] [rank(115)=round(full_rank(768)*rank_ratio(0.15))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.11.mlp.fc1] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.10.mlp.fc1] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.9.mlp.fc1] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.8.mlp.fc1] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.7.mlp.fc1] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.6.mlp.fc1] [rank(128)=round(full_rank(512)*rank_ratio(0.25))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.5.mlp.fc1] [rank(51)=round(full_rank(512)*rank_ratio(0.1))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.4.mlp.fc1] [rank(102)=round(full_rank(512)*rank_ratio(0.2))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.3.mlp.fc1] [rank(26)=round(full_rank(512)*rank_ratio(0.05))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.2.mlp.fc1] [rank(26)=round(full_rank(512)*rank_ratio(0.05))]
+2024-06-16 05:00:48,973 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.1.mlp.fc1] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:00:48,974 | INFO | model_hub.py:190 | to_target_modules | [text_model.encoder.layers.0.mlp.fc1] [rank(102)=round(full_rank(512)*rank_ratio(0.2))]
+2024-06-16 05:00:48,974 | INFO | model_hub.py:194 | to_target_modules | lora_settings -> target_modules: 
+{
+    "vision_model.encoder.layers.11.mlp.fc1": 115,
+    "vision_model.encoder.layers.10.mlp.fc1": 115,
+    "vision_model.encoder.layers.9.mlp.fc1": 0,
+    "vision_model.encoder.layers.8.mlp.fc1": 0,
+    "vision_model.encoder.layers.7.mlp.fc1": 0,
+    "vision_model.encoder.layers.6.mlp.fc1": 0,
+    "vision_model.encoder.layers.5.mlp.fc1": 0,
+    "vision_model.encoder.layers.4.mlp.fc1": 0,
+    "vision_model.encoder.layers.3.mlp.fc1": 38,
+    "vision_model.encoder.layers.2.mlp.fc1": 0,
+    "vision_model.encoder.layers.1.mlp.fc1": 0,
+    "vision_model.encoder.layers.0.mlp.fc1": 115,
+    "text_model.encoder.layers.11.mlp.fc1": 0,
+    "text_model.encoder.layers.10.mlp.fc1": 0,
+    "text_model.encoder.layers.9.mlp.fc1": 0,
+    "text_model.encoder.layers.8.mlp.fc1": 0,
+    "text_model.encoder.layers.7.mlp.fc1": 0,
+    "text_model.encoder.layers.6.mlp.fc1": 128,
+    "text_model.encoder.layers.5.mlp.fc1": 51,
+    "text_model.encoder.layers.4.mlp.fc1": 102,
+    "text_model.encoder.layers.3.mlp.fc1": 26,
+    "text_model.encoder.layers.2.mlp.fc1": 26,
+    "text_model.encoder.layers.1.mlp.fc1": 0,
+    "text_model.encoder.layers.0.mlp.fc1": 102
+}
+2024-06-16 05:00:48,994 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.11.mlp.fc1] [Rank: 115]
+2024-06-16 05:00:48,999 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.10.mlp.fc1] [Rank: 115]
+2024-06-16 05:00:48,999 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.9.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:48,999 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.8.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:48,999 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.7.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:48,999 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.6.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:48,999 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.5.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:48,999 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.4.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,001 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.3.mlp.fc1] [Rank: 38]
+2024-06-16 05:00:49,001 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.2.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,001 | INFO | model.py:71 | inject_adapter | [vision_model.encoder.layers.1.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,006 | INFO | model.py:78 | inject_adapter | [vision_model.encoder.layers.0.mlp.fc1] [Rank: 115]
+2024-06-16 05:00:49,006 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.11.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,006 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.10.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,006 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.9.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,006 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.8.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,006 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.7.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,010 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.6.mlp.fc1] [Rank: 128]
+2024-06-16 05:00:49,012 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.5.mlp.fc1] [Rank: 51]
+2024-06-16 05:00:49,015 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.4.mlp.fc1] [Rank: 102]
+2024-06-16 05:00:49,017 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.3.mlp.fc1] [Rank: 26]
+2024-06-16 05:00:49,018 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.2.mlp.fc1] [Rank: 26]
+2024-06-16 05:00:49,018 | INFO | model.py:71 | inject_adapter | [text_model.encoder.layers.1.mlp.fc1] [Rank: 0] [Skipped]
+2024-06-16 05:00:49,021 | INFO | model.py:78 | inject_adapter | [text_model.encoder.layers.0.mlp.fc1] [Rank: 102]
+2024-06-16 05:00:49,725 | INFO | model.py:192 | svd_init | SVD initialized for adapter 'default'.
+2024-06-16 05:00:49,727 | INFO | model.py:115 | disable_lora_scaling | Disabled Lora scaling for adapter 'default'.
+trainable params: 2,584,320 || all params: 152,205,057 || trainable%: 1.6979199317930678
+base_model.model.text_model.encoder.layers.0.mlp.fc1.lora_A.default.weight [102, 512]
+base_model.model.text_model.encoder.layers.0.mlp.fc1.lora_B.default.weight [2048, 102]
+base_model.model.text_model.encoder.layers.2.mlp.fc1.lora_A.default.weight [26, 512]
+base_model.model.text_model.encoder.layers.2.mlp.fc1.lora_B.default.weight [2048, 26]
+base_model.model.text_model.encoder.layers.3.mlp.fc1.lora_A.default.weight [26, 512]
+base_model.model.text_model.encoder.layers.3.mlp.fc1.lora_B.default.weight [2048, 26]
+base_model.model.text_model.encoder.layers.4.mlp.fc1.lora_A.default.weight [102, 512]
+base_model.model.text_model.encoder.layers.4.mlp.fc1.lora_B.default.weight [2048, 102]
+base_model.model.text_model.encoder.layers.5.mlp.fc1.lora_A.default.weight [51, 512]
+base_model.model.text_model.encoder.layers.5.mlp.fc1.lora_B.default.weight [2048, 51]
+base_model.model.text_model.encoder.layers.6.mlp.fc1.lora_A.default.weight [128, 512]
+base_model.model.text_model.encoder.layers.6.mlp.fc1.lora_B.default.weight [2048, 128]
+base_model.model.vision_model.encoder.layers.0.mlp.fc1.lora_A.default.weight [115, 768]
+base_model.model.vision_model.encoder.layers.0.mlp.fc1.lora_B.default.weight [3072, 115]
+base_model.model.vision_model.encoder.layers.3.mlp.fc1.lora_A.default.weight [38, 768]
+base_model.model.vision_model.encoder.layers.3.mlp.fc1.lora_B.default.weight [3072, 38]
+base_model.model.vision_model.encoder.layers.10.mlp.fc1.lora_A.default.weight [115, 768]
+base_model.model.vision_model.encoder.layers.10.mlp.fc1.lora_B.default.weight [3072, 115]
+base_model.model.vision_model.encoder.layers.11.mlp.fc1.lora_A.default.weight [115, 768]
+base_model.model.vision_model.encoder.layers.11.mlp.fc1.lora_B.default.weight [3072, 115]
+2024-06-16 05:00:49,759 | INFO | finetune.py:118 | run_finetune | ***** Running training *****
+2024-06-16 05:00:49,759 | INFO | finetune.py:119 | run_finetune |   Num examples = 1000
+2024-06-16 05:00:49,759 | INFO | finetune.py:120 | run_finetune |   Num Epochs = 5
+2024-06-16 05:00:49,759 | INFO | finetune.py:121 | run_finetune |   Instantaneous batch size per device = 100
+2024-06-16 05:00:49,759 | INFO | finetune.py:122 | run_finetune |   Total train batch size (w. parallel, distributed & accumulation) = 100
+2024-06-16 05:00:49,759 | INFO | finetune.py:123 | run_finetune |   Gradient Accumulation steps = 1
+2024-06-16 05:00:49,759 | INFO | finetune.py:124 | run_finetune |   Total optimization steps = 50
+2024-06-16 05:00:51,670 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 0 | Loss: 0.9038 | Loss ID: 1.3476 | Loss OOD: -4.4375
+2024-06-16 05:00:52,248 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 1 | Loss: 0.7242 | Loss ID: 1.1696 | Loss OOD: -4.4537
+2024-06-16 05:00:52,820 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 2 | Loss: 0.6472 | Loss ID: 1.0913 | Loss OOD: -4.4414
+2024-06-16 05:00:53,391 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 3 | Loss: 0.4984 | Loss ID: 0.9519 | Loss OOD: -4.5358
+2024-06-16 05:00:53,967 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 4 | Loss: 0.5188 | Loss ID: 0.9794 | Loss OOD: -4.6058
+2024-06-16 05:00:54,538 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 5 | Loss: 0.4725 | Loss ID: 0.9330 | Loss OOD: -4.6044
+2024-06-16 05:00:55,111 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 6 | Loss: 0.5089 | Loss ID: 0.9856 | Loss OOD: -4.7670
+2024-06-16 05:00:55,683 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 7 | Loss: 0.9463 | Loss ID: 1.4356 | Loss OOD: -4.8932
+2024-06-16 05:00:56,255 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 8 | Loss: 0.4409 | Loss ID: 0.9361 | Loss OOD: -4.9521
+2024-06-16 05:00:56,895 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 9 | Loss: 0.4184 | Loss ID: 0.9170 | Loss OOD: -4.9866
+2024-06-16 05:00:58,168 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 0 | Loss: 0.3784 | Loss ID: 0.8877 | Loss OOD: -5.0922
+2024-06-16 05:00:58,741 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 1 | Loss: 0.2500 | Loss ID: 0.7667 | Loss OOD: -5.1664
+2024-06-16 05:00:59,313 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 2 | Loss: 0.0833 | Loss ID: 0.5968 | Loss OOD: -5.1353
+2024-06-16 05:00:59,887 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 3 | Loss: 0.2133 | Loss ID: 0.7326 | Loss OOD: -5.1928
+2024-06-16 05:01:00,459 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 4 | Loss: 0.2582 | Loss ID: 0.7786 | Loss OOD: -5.2046
+2024-06-16 05:01:01,032 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 5 | Loss: 0.1910 | Loss ID: 0.7109 | Loss OOD: -5.1997
+2024-06-16 05:01:01,605 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 6 | Loss: 0.1457 | Loss ID: 0.6655 | Loss OOD: -5.1978
+2024-06-16 05:01:02,179 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 7 | Loss: 0.2488 | Loss ID: 0.7716 | Loss OOD: -5.2280
+2024-06-16 05:01:02,753 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 8 | Loss: 0.2839 | Loss ID: 0.8115 | Loss OOD: -5.2763
+2024-06-16 05:01:03,404 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 9 | Loss: 0.2400 | Loss ID: 0.7708 | Loss OOD: -5.3077
+2024-06-16 05:01:04,631 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 0 | Loss: 0.0515 | Loss ID: 0.5959 | Loss OOD: -5.4444
+2024-06-16 05:01:05,206 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 1 | Loss: -0.0170 | Loss ID: 0.5213 | Loss OOD: -5.3833
+2024-06-16 05:01:05,780 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 2 | Loss: -0.0537 | Loss ID: 0.4862 | Loss OOD: -5.3990
+2024-06-16 05:01:06,355 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 3 | Loss: 0.0722 | Loss ID: 0.6164 | Loss OOD: -5.4424
+2024-06-16 05:01:06,932 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 4 | Loss: 0.0162 | Loss ID: 0.5551 | Loss OOD: -5.3896
+2024-06-16 05:01:07,509 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 5 | Loss: -0.1458 | Loss ID: 0.4023 | Loss OOD: -5.4815
+2024-06-16 05:01:08,083 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 6 | Loss: 0.0242 | Loss ID: 0.5717 | Loss OOD: -5.4756
+2024-06-16 05:01:08,656 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 7 | Loss: 0.0678 | Loss ID: 0.6188 | Loss OOD: -5.5099
+2024-06-16 05:01:09,232 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 8 | Loss: -0.0001 | Loss ID: 0.5550 | Loss OOD: -5.5506
+2024-06-16 05:01:09,875 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 9 | Loss: -0.0711 | Loss ID: 0.4805 | Loss OOD: -5.5161
+2024-06-16 05:01:11,219 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 0 | Loss: -0.1174 | Loss ID: 0.4417 | Loss OOD: -5.5905
+2024-06-16 05:01:11,795 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 1 | Loss: -0.0811 | Loss ID: 0.4750 | Loss OOD: -5.5604
+2024-06-16 05:01:12,370 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 2 | Loss: -0.2943 | Loss ID: 0.2656 | Loss OOD: -5.5997
+2024-06-16 05:01:12,945 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 3 | Loss: -0.1684 | Loss ID: 0.3856 | Loss OOD: -5.5403
+2024-06-16 05:01:13,521 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 4 | Loss: -0.0997 | Loss ID: 0.4568 | Loss OOD: -5.5643
+2024-06-16 05:01:14,097 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 5 | Loss: -0.1140 | Loss ID: 0.4442 | Loss OOD: -5.5828
+2024-06-16 05:01:14,672 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 6 | Loss: 0.0710 | Loss ID: 0.6262 | Loss OOD: -5.5517
+2024-06-16 05:01:15,247 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 7 | Loss: -0.1304 | Loss ID: 0.4277 | Loss OOD: -5.5816
+2024-06-16 05:01:15,823 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 8 | Loss: -0.1969 | Loss ID: 0.3641 | Loss OOD: -5.6103
+2024-06-16 05:01:16,476 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 9 | Loss: -0.1245 | Loss ID: 0.4374 | Loss OOD: -5.6193
+2024-06-16 05:01:17,894 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 0 | Loss: -0.0331 | Loss ID: 0.5272 | Loss OOD: -5.6035
+2024-06-16 05:01:18,471 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 1 | Loss: -0.2445 | Loss ID: 0.3187 | Loss OOD: -5.6326
+2024-06-16 05:01:19,047 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 2 | Loss: -0.1480 | Loss ID: 0.4160 | Loss OOD: -5.6405
+2024-06-16 05:01:19,624 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 3 | Loss: -0.2502 | Loss ID: 0.3163 | Loss OOD: -5.6657
+2024-06-16 05:01:20,200 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 4 | Loss: -0.2668 | Loss ID: 0.2981 | Loss OOD: -5.6496
+2024-06-16 05:01:20,775 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 5 | Loss: -0.1514 | Loss ID: 0.4083 | Loss OOD: -5.5965
+2024-06-16 05:01:21,352 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 6 | Loss: -0.0455 | Loss ID: 0.5108 | Loss OOD: -5.5632
+2024-06-16 05:01:21,928 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 7 | Loss: -0.2267 | Loss ID: 0.3347 | Loss OOD: -5.6141
+2024-06-16 05:01:22,505 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 8 | Loss: -0.1464 | Loss ID: 0.4107 | Loss OOD: -5.5709
+2024-06-16 05:01:23,156 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 9 | Loss: -0.1858 | Loss ID: 0.3734 | Loss OOD: -5.5924
+2024-06-16 05:01:24,047 | INFO | finetune.py:182 | run_finetune | Model saved to ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/finetuned_model.pth
+2024-06-16 05:01:24,047 | INFO | finetune.py:187 | run_finetune | ############ Done! Finetune time: 0m 37s ############
+2024-06-16 05:01:24,057 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 05:01:24,057 | INFO | test_ood.py:30 | run_test_ood | Loading CLIP model: openai/clip-vit-base-patch16...
+2024-06-16 05:01:24,558 | INFO | test_ood.py:45 | run_test_ood | Loading CLIP model weights from ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/finetuned_model.pth...
+2024-06-16 05:01:24,887 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 05:01:24,887 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 05:03:34,962 | INFO | model_hub.py:304 | compute_scores | Took 130.07 s to run.
+2024-06-16 05:03:35,142 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 05:03:35,143 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 05:04:03,313 | INFO | model_hub.py:304 | compute_scores | Took 28.17 s to run.
+2024-06-16 05:04:03,386 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - mcm_score
+2024-06-16 05:04:03,386 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:04:03,386 | INFO | metrics.py:57 | print_metrics | & 33.04 & 93.49 & 98.55
+2024-06-16 05:04:04,142 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - gl_mcm_score
+2024-06-16 05:04:04,142 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:04:04,142 | INFO | metrics.py:57 | print_metrics | & 21.51 & 95.46 & 98.95
+2024-06-16 05:04:04,889 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 05:04:04,889 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 05:04:36,281 | INFO | model_hub.py:304 | compute_scores | Took 31.39 s to run.
+2024-06-16 05:04:36,356 | INFO | metrics.py:55 | print_metrics | OOD_Sun - mcm_score
+2024-06-16 05:04:36,356 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:04:36,356 | INFO | metrics.py:57 | print_metrics | & 29.38 & 93.96 & 98.60
+2024-06-16 05:04:37,153 | INFO | metrics.py:55 | print_metrics | OOD_Sun - gl_mcm_score
+2024-06-16 05:04:37,153 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:04:37,153 | INFO | metrics.py:57 | print_metrics | & 23.02 & 94.96 & 98.80
+2024-06-16 05:04:38,011 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 05:04:38,011 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 05:05:05,116 | INFO | model_hub.py:304 | compute_scores | Took 27.1 s to run.
+2024-06-16 05:05:05,190 | INFO | metrics.py:55 | print_metrics | OOD_Places - mcm_score
+2024-06-16 05:05:05,190 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:05:05,190 | INFO | metrics.py:57 | print_metrics | & 37.75 & 91.34 & 97.83
+2024-06-16 05:05:05,881 | INFO | metrics.py:55 | print_metrics | OOD_Places - gl_mcm_score
+2024-06-16 05:05:05,882 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:05:05,882 | INFO | metrics.py:57 | print_metrics | & 32.27 & 91.96 & 97.92
+2024-06-16 05:05:06,569 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 05:05:06,569 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 05:05:21,873 | INFO | model_hub.py:304 | compute_scores | Took 15.3 s to run.
+2024-06-16 05:05:21,936 | INFO | metrics.py:55 | print_metrics | OOD_Texture - mcm_score
+2024-06-16 05:05:21,936 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:05:21,936 | INFO | metrics.py:57 | print_metrics | & 54.45 & 87.42 & 98.24
+2024-06-16 05:05:22,632 | INFO | metrics.py:55 | print_metrics | OOD_Texture - gl_mcm_score
+2024-06-16 05:05:22,632 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:05:22,632 | INFO | metrics.py:57 | print_metrics | & 52.27 & 86.65 & 97.95
+2024-06-16 05:05:23,300 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for mcm_score ############
+2024-06-16 05:05:23,304 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:05:23,305 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  33.04  93.49 98.55
+OOD_Sun          29.38  93.96 98.60
+OOD_Places       37.75  91.34 97.83
+OOD_Texture      54.45  87.42 98.24
+Avg              38.66  91.55 98.30
+2024-06-16 05:05:23,305 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/metrics_mcm_score_test.csv
+2024-06-16 05:05:23,306 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:05:23,307 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.001109
+        OOD_Sun 0.001109
+     OOD_Places 0.001109
+    OOD_Texture 0.001109
+2024-06-16 05:05:23,307 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/cutoffs_mcm_score_test.csv
+2024-06-16 05:05:23,307 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for gl_mcm_score ############
+2024-06-16 05:05:23,309 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:05:23,310 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  21.51  95.46 98.95
+OOD_Sun          23.02  94.96 98.80
+OOD_Places       32.27  91.96 97.92
+OOD_Texture      52.27  86.65 97.95
+Avg              32.27  92.26 98.40
+2024-06-16 05:05:23,310 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/metrics_gl_mcm_score_test.csv
+2024-06-16 05:05:23,311 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:05:23,311 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.002222
+        OOD_Sun 0.002222
+     OOD_Places 0.002222
+    OOD_Texture 0.002222
+2024-06-16 05:05:23,311 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/cutoffs_gl_mcm_score_test.csv
+2024-06-16 05:05:23,311 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 3m 59s ############
+2024-06-16 05:05:23,312 | INFO | test_classify.py:121 | run_test_classify | ############ Test Classification ############
+2024-06-16 05:05:23,312 | INFO | test_classify.py:122 | run_test_classify | Loading CLIP model: openai/clip-vit-base-patch16...
+2024-06-16 05:05:23,760 | INFO | test_classify.py:137 | run_test_classify | Loading clip model weights from ./results/finetune/clip_base/ID_ImageNet1K/SeTAR+FT/finetuned_model.pth...
+2024-06-16 05:05:24,012 | INFO | test_classify.py:151 | run_test_classify | ############ ID_ImageNet1K ############
+2024-06-16 05:08:38,382 | INFO | test_classify.py:161 | run_test_classify | Accuracy on ID_ImageNet1K: 67.07
+2024-06-16 05:08:38,382 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Sun ############
+2024-06-16 05:09:04,823 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Sun: 77.97
+2024-06-16 05:09:04,824 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Places ############
+2024-06-16 05:09:30,128 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Places: 46.60
+2024-06-16 05:09:30,128 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Texture ############
+2024-06-16 05:09:44,853 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Texture: 43.48
+2024-06-16 05:09:44,853 | INFO | test_classify.py:164 | run_test_classify | ############ Summary ############
+2024-06-16 05:09:44,853 | INFO | test_classify.py:166 | run_test_classify | Accuracy on ID_ImageNet1K: 67.07
+2024-06-16 05:09:44,853 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Sun: 77.97
+2024-06-16 05:09:44,854 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Places: 46.60
+2024-06-16 05:09:44,854 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Texture: 43.48

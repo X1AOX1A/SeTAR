@@ -1,0 +1,473 @@
+2024-06-16 05:00:59,821 | INFO | argparser.py:195 | print_args | Loading args from config file: configs/finetune/clip_large/ID_ImageNet1K/LoRA.json
+2024-06-16 05:00:59,821 | INFO | argparser.py:198 | print_args | Config: 
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "val",
+    "batch_size": 20,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "LoRA",
+    "log_directory": "./results/finetune/clip_large/ID_ImageNet1K/LoRA",
+    "scorers": [
+        "mcm_score",
+        "gl_mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-large-patch14",
+    "model_type": "CLIP",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": false,
+    "lora_svd_init_type": null,
+    "lora_settings": null,
+    "target_modules": [
+        "mlp.fc1"
+    ],
+    "lora_r": 64,
+    "lora_alpha": 16,
+    "n_ctx": 16,
+    "num_train_epochs": 5,
+    "max_train_steps": null,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "momentum": 0.9,
+    "lr_scheduler_type": "cosine",
+    "num_warmup_steps": 0,
+    "locoop_lambda": 0.5,
+    "locoop_top_k": 300,
+    "logging_steps": 1
+}
+2024-06-16 05:00:59,987 | WARNING | other.py:349 | check_os_kernel | Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+2024-06-16 05:00:59,989 | INFO | finetune.py:35 | run_finetune | Loading CLIP model: openai/clip-vit-large-patch14...
+trainable params: 10,813,440 || all params: 438,429,953 || trainable%: 2.4664008300546016
+base_model.model.text_model.encoder.layers.0.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.0.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.1.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.1.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.2.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.2.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.3.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.3.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.4.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.4.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.5.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.5.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.6.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.6.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.7.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.7.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.8.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.8.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.9.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.9.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.10.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.10.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.text_model.encoder.layers.11.mlp.fc1.lora_A.default.weight [64, 768]
+base_model.model.text_model.encoder.layers.11.mlp.fc1.lora_B.default.weight [3072, 64]
+base_model.model.vision_model.encoder.layers.0.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.0.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.1.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.1.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.2.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.2.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.3.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.3.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.4.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.4.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.5.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.5.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.6.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.6.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.7.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.7.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.8.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.8.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.9.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.9.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.10.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.10.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.11.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.11.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.12.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.12.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.13.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.13.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.14.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.14.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.15.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.15.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.16.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.16.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.17.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.17.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.18.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.18.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.19.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.19.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.20.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.20.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.21.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.21.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.22.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.22.mlp.fc1.lora_B.default.weight [4096, 64]
+base_model.model.vision_model.encoder.layers.23.mlp.fc1.lora_A.default.weight [64, 1024]
+base_model.model.vision_model.encoder.layers.23.mlp.fc1.lora_B.default.weight [4096, 64]
+2024-06-16 05:01:01,419 | INFO | finetune.py:118 | run_finetune | ***** Running training *****
+2024-06-16 05:01:01,420 | INFO | finetune.py:119 | run_finetune |   Num examples = 1000
+2024-06-16 05:01:01,420 | INFO | finetune.py:120 | run_finetune |   Num Epochs = 5
+2024-06-16 05:01:01,420 | INFO | finetune.py:121 | run_finetune |   Instantaneous batch size per device = 20
+2024-06-16 05:01:01,420 | INFO | finetune.py:122 | run_finetune |   Total train batch size (w. parallel, distributed & accumulation) = 20
+2024-06-16 05:01:01,420 | INFO | finetune.py:123 | run_finetune |   Gradient Accumulation steps = 1
+2024-06-16 05:01:01,420 | INFO | finetune.py:124 | run_finetune |   Total optimization steps = 250
+2024-06-16 05:01:03,187 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 0 | Loss: -1.1299 | Loss ID: 1.1750 | Loss OOD: -4.6097
+2024-06-16 05:01:03,861 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 1 | Loss: -1.3775 | Loss ID: 0.9580 | Loss OOD: -4.6711
+2024-06-16 05:01:04,532 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 2 | Loss: -1.8353 | Loss ID: 0.4924 | Loss OOD: -4.6553
+2024-06-16 05:01:05,203 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 3 | Loss: -1.5768 | Loss ID: 0.7310 | Loss OOD: -4.6156
+2024-06-16 05:01:05,875 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 4 | Loss: -1.5024 | Loss ID: 0.8029 | Loss OOD: -4.6107
+2024-06-16 05:01:06,546 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 5 | Loss: -1.1518 | Loss ID: 1.1496 | Loss OOD: -4.6027
+2024-06-16 05:01:07,217 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 6 | Loss: -1.5123 | Loss ID: 0.7999 | Loss OOD: -4.6244
+2024-06-16 05:01:07,889 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 7 | Loss: -1.6277 | Loss ID: 0.6577 | Loss OOD: -4.5707
+2024-06-16 05:01:08,560 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 8 | Loss: -1.4431 | Loss ID: 0.9178 | Loss OOD: -4.7218
+2024-06-16 05:01:09,232 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 9 | Loss: -1.4191 | Loss ID: 0.9415 | Loss OOD: -4.7212
+2024-06-16 05:01:09,905 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 10 | Loss: -1.3099 | Loss ID: 1.0045 | Loss OOD: -4.6289
+2024-06-16 05:01:10,577 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 11 | Loss: -1.9282 | Loss ID: 0.4007 | Loss OOD: -4.6577
+2024-06-16 05:01:11,249 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 12 | Loss: -1.3444 | Loss ID: 0.9888 | Loss OOD: -4.6665
+2024-06-16 05:01:11,922 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 13 | Loss: -1.4639 | Loss ID: 0.8732 | Loss OOD: -4.6742
+2024-06-16 05:01:12,595 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 14 | Loss: -1.5524 | Loss ID: 0.7651 | Loss OOD: -4.6349
+2024-06-16 05:01:13,272 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 15 | Loss: -1.7628 | Loss ID: 0.5669 | Loss OOD: -4.6594
+2024-06-16 05:01:13,945 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 16 | Loss: -1.3399 | Loss ID: 1.0030 | Loss OOD: -4.6857
+2024-06-16 05:01:14,619 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 17 | Loss: -1.3736 | Loss ID: 0.9514 | Loss OOD: -4.6501
+2024-06-16 05:01:15,293 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 18 | Loss: -1.3307 | Loss ID: 1.0023 | Loss OOD: -4.6660
+2024-06-16 05:01:15,966 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 19 | Loss: -1.8298 | Loss ID: 0.5220 | Loss OOD: -4.7035
+2024-06-16 05:01:16,640 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 20 | Loss: -1.4720 | Loss ID: 0.8684 | Loss OOD: -4.6808
+2024-06-16 05:01:17,315 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 21 | Loss: -1.7740 | Loss ID: 0.5810 | Loss OOD: -4.7100
+2024-06-16 05:01:17,991 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 22 | Loss: -1.6255 | Loss ID: 0.7097 | Loss OOD: -4.6703
+2024-06-16 05:01:18,668 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 23 | Loss: -1.0358 | Loss ID: 1.3432 | Loss OOD: -4.7579
+2024-06-16 05:01:19,344 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 24 | Loss: -1.2480 | Loss ID: 1.1262 | Loss OOD: -4.7484
+2024-06-16 05:01:20,019 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 25 | Loss: -1.6652 | Loss ID: 0.7169 | Loss OOD: -4.7642
+2024-06-16 05:01:20,695 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 26 | Loss: -1.5021 | Loss ID: 0.8555 | Loss OOD: -4.7151
+2024-06-16 05:01:21,370 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 27 | Loss: -1.2311 | Loss ID: 1.1203 | Loss OOD: -4.7028
+2024-06-16 05:01:22,046 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 28 | Loss: -1.1749 | Loss ID: 1.1795 | Loss OOD: -4.7088
+2024-06-16 05:01:22,722 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 29 | Loss: -1.3755 | Loss ID: 1.0052 | Loss OOD: -4.7614
+2024-06-16 05:01:23,399 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 30 | Loss: -1.6629 | Loss ID: 0.7050 | Loss OOD: -4.7358
+2024-06-16 05:01:24,081 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 31 | Loss: -1.3532 | Loss ID: 1.0597 | Loss OOD: -4.8260
+2024-06-16 05:01:24,759 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 32 | Loss: -1.3377 | Loss ID: 1.0344 | Loss OOD: -4.7442
+2024-06-16 05:01:25,437 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 33 | Loss: -1.3734 | Loss ID: 0.9984 | Loss OOD: -4.7436
+2024-06-16 05:01:26,116 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 34 | Loss: -0.3385 | Loss ID: 2.0273 | Loss OOD: -4.7316
+2024-06-16 05:01:26,796 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 35 | Loss: -1.0523 | Loss ID: 1.3466 | Loss OOD: -4.7977
+2024-06-16 05:01:27,478 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 36 | Loss: -1.1750 | Loss ID: 1.2168 | Loss OOD: -4.7837
+2024-06-16 05:01:28,154 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 37 | Loss: -2.2107 | Loss ID: 0.2176 | Loss OOD: -4.8568
+2024-06-16 05:01:28,834 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 38 | Loss: -1.3308 | Loss ID: 1.0807 | Loss OOD: -4.8230
+2024-06-16 05:01:29,513 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 39 | Loss: -1.8336 | Loss ID: 0.5617 | Loss OOD: -4.7907
+2024-06-16 05:01:30,191 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 40 | Loss: -1.8171 | Loss ID: 0.6230 | Loss OOD: -4.8802
+2024-06-16 05:01:30,868 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 41 | Loss: -0.8952 | Loss ID: 1.5381 | Loss OOD: -4.8666
+2024-06-16 05:01:31,548 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 42 | Loss: -2.0366 | Loss ID: 0.4113 | Loss OOD: -4.8958
+2024-06-16 05:01:32,228 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 43 | Loss: -1.4335 | Loss ID: 1.0017 | Loss OOD: -4.8705
+2024-06-16 05:01:32,910 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 44 | Loss: -1.4510 | Loss ID: 0.9722 | Loss OOD: -4.8462
+2024-06-16 05:01:33,588 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 45 | Loss: -1.2947 | Loss ID: 1.1364 | Loss OOD: -4.8621
+2024-06-16 05:01:34,269 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 46 | Loss: -1.4516 | Loss ID: 1.0044 | Loss OOD: -4.9120
+2024-06-16 05:01:34,948 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 47 | Loss: -1.5718 | Loss ID: 0.8842 | Loss OOD: -4.9120
+2024-06-16 05:01:35,626 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 48 | Loss: -1.7337 | Loss ID: 0.7220 | Loss OOD: -4.9115
+2024-06-16 05:01:36,353 | INFO | finetune.py:158 | run_finetune | Epoch 0 | Step 49 | Loss: -1.7976 | Loss ID: 0.6872 | Loss OOD: -4.9696
+2024-06-16 05:01:37,358 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 0 | Loss: -1.6943 | Loss ID: 0.7751 | Loss OOD: -4.9387
+2024-06-16 05:01:38,038 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 1 | Loss: -1.2813 | Loss ID: 1.2129 | Loss OOD: -4.9883
+2024-06-16 05:01:38,719 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 2 | Loss: -2.0975 | Loss ID: 0.3821 | Loss OOD: -4.9592
+2024-06-16 05:01:39,397 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 3 | Loss: -0.8550 | Loss ID: 1.5899 | Loss OOD: -4.8898
+2024-06-16 05:01:40,077 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 4 | Loss: -1.3294 | Loss ID: 1.1401 | Loss OOD: -4.9389
+2024-06-16 05:01:40,758 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 5 | Loss: -2.0127 | Loss ID: 0.4664 | Loss OOD: -4.9582
+2024-06-16 05:01:41,437 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 6 | Loss: -1.1479 | Loss ID: 1.3416 | Loss OOD: -4.9789
+2024-06-16 05:01:42,117 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 7 | Loss: -1.9834 | Loss ID: 0.5012 | Loss OOD: -4.9693
+2024-06-16 05:01:42,798 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 8 | Loss: -1.2570 | Loss ID: 1.2151 | Loss OOD: -4.9441
+2024-06-16 05:01:43,478 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 9 | Loss: -1.4856 | Loss ID: 1.0295 | Loss OOD: -5.0300
+2024-06-16 05:01:44,158 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 10 | Loss: -1.5233 | Loss ID: 0.9842 | Loss OOD: -5.0150
+2024-06-16 05:01:44,838 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 11 | Loss: -2.0340 | Loss ID: 0.4654 | Loss OOD: -4.9989
+2024-06-16 05:01:45,518 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 12 | Loss: -1.6254 | Loss ID: 0.8516 | Loss OOD: -4.9540
+2024-06-16 05:01:46,199 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 13 | Loss: -1.6062 | Loss ID: 0.8798 | Loss OOD: -4.9719
+2024-06-16 05:01:46,879 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 14 | Loss: -1.5316 | Loss ID: 0.9816 | Loss OOD: -5.0264
+2024-06-16 05:01:47,559 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 15 | Loss: -1.9598 | Loss ID: 0.5565 | Loss OOD: -5.0325
+2024-06-16 05:01:48,240 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 16 | Loss: -1.0298 | Loss ID: 1.4962 | Loss OOD: -5.0521
+2024-06-16 05:01:48,920 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 17 | Loss: -1.3027 | Loss ID: 1.2433 | Loss OOD: -5.0921
+2024-06-16 05:01:49,602 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 18 | Loss: -1.9155 | Loss ID: 0.6169 | Loss OOD: -5.0647
+2024-06-16 05:01:50,282 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 19 | Loss: -1.1075 | Loss ID: 1.3730 | Loss OOD: -4.9608
+2024-06-16 05:01:50,962 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 20 | Loss: -1.4282 | Loss ID: 1.1231 | Loss OOD: -5.1028
+2024-06-16 05:01:51,644 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 21 | Loss: -1.5262 | Loss ID: 0.9868 | Loss OOD: -5.0260
+2024-06-16 05:01:52,326 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 22 | Loss: -2.0381 | Loss ID: 0.5176 | Loss OOD: -5.1114
+2024-06-16 05:01:53,008 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 23 | Loss: -2.1988 | Loss ID: 0.3645 | Loss OOD: -5.1267
+2024-06-16 05:01:53,691 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 24 | Loss: -1.0124 | Loss ID: 1.5470 | Loss OOD: -5.1188
+2024-06-16 05:01:54,372 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 25 | Loss: -1.9992 | Loss ID: 0.5514 | Loss OOD: -5.1013
+2024-06-16 05:01:55,054 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 26 | Loss: -2.0804 | Loss ID: 0.4740 | Loss OOD: -5.1087
+2024-06-16 05:01:55,735 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 27 | Loss: -1.9692 | Loss ID: 0.6314 | Loss OOD: -5.2012
+2024-06-16 05:01:56,416 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 28 | Loss: -1.8879 | Loss ID: 0.7059 | Loss OOD: -5.1876
+2024-06-16 05:01:57,100 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 29 | Loss: -2.1204 | Loss ID: 0.4773 | Loss OOD: -5.1955
+2024-06-16 05:01:57,782 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 30 | Loss: -1.5562 | Loss ID: 1.0324 | Loss OOD: -5.1771
+2024-06-16 05:01:58,465 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 31 | Loss: -1.8946 | Loss ID: 0.7124 | Loss OOD: -5.2140
+2024-06-16 05:01:59,148 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 32 | Loss: -2.3802 | Loss ID: 0.2338 | Loss OOD: -5.2280
+2024-06-16 05:01:59,830 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 33 | Loss: -1.4547 | Loss ID: 1.1643 | Loss OOD: -5.2380
+2024-06-16 05:02:00,513 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 34 | Loss: -1.9180 | Loss ID: 0.6713 | Loss OOD: -5.1786
+2024-06-16 05:02:01,194 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 35 | Loss: -1.7281 | Loss ID: 0.9166 | Loss OOD: -5.2894
+2024-06-16 05:02:01,875 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 36 | Loss: -1.9019 | Loss ID: 0.7231 | Loss OOD: -5.2501
+2024-06-16 05:02:02,555 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 37 | Loss: -1.8294 | Loss ID: 0.8137 | Loss OOD: -5.2861
+2024-06-16 05:02:03,237 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 38 | Loss: -1.6028 | Loss ID: 1.0210 | Loss OOD: -5.2476
+2024-06-16 05:02:03,918 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 39 | Loss: -1.6655 | Loss ID: 0.9982 | Loss OOD: -5.3274
+2024-06-16 05:02:04,599 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 40 | Loss: -1.8187 | Loss ID: 0.8416 | Loss OOD: -5.3207
+2024-06-16 05:02:05,281 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 41 | Loss: -1.7373 | Loss ID: 0.8911 | Loss OOD: -5.2568
+2024-06-16 05:02:05,963 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 42 | Loss: -1.9316 | Loss ID: 0.7409 | Loss OOD: -5.3451
+2024-06-16 05:02:06,645 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 43 | Loss: -1.3804 | Loss ID: 1.2521 | Loss OOD: -5.2651
+2024-06-16 05:02:07,325 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 44 | Loss: -1.6983 | Loss ID: 0.9494 | Loss OOD: -5.2954
+2024-06-16 05:02:08,007 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 45 | Loss: -1.6778 | Loss ID: 0.9738 | Loss OOD: -5.3032
+2024-06-16 05:02:08,687 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 46 | Loss: -2.2076 | Loss ID: 0.4930 | Loss OOD: -5.4012
+2024-06-16 05:02:09,369 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 47 | Loss: -1.9259 | Loss ID: 0.7729 | Loss OOD: -5.3976
+2024-06-16 05:02:10,050 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 48 | Loss: -1.9798 | Loss ID: 0.6878 | Loss OOD: -5.3351
+2024-06-16 05:02:10,803 | INFO | finetune.py:158 | run_finetune | Epoch 1 | Step 49 | Loss: -1.9315 | Loss ID: 0.7641 | Loss OOD: -5.3913
+2024-06-16 05:02:11,905 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 0 | Loss: -1.9216 | Loss ID: 0.7649 | Loss OOD: -5.3730
+2024-06-16 05:02:12,587 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 1 | Loss: -1.8597 | Loss ID: 0.8357 | Loss OOD: -5.3909
+2024-06-16 05:02:13,269 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 2 | Loss: -2.3338 | Loss ID: 0.3742 | Loss OOD: -5.4162
+2024-06-16 05:02:13,951 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 3 | Loss: -1.4652 | Loss ID: 1.2518 | Loss OOD: -5.4341
+2024-06-16 05:02:14,634 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 4 | Loss: -1.5730 | Loss ID: 1.1446 | Loss OOD: -5.4353
+2024-06-16 05:02:15,316 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 5 | Loss: -1.5428 | Loss ID: 1.1830 | Loss OOD: -5.4517
+2024-06-16 05:02:15,999 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 6 | Loss: -1.9542 | Loss ID: 0.7681 | Loss OOD: -5.4447
+2024-06-16 05:02:16,682 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 7 | Loss: -2.1493 | Loss ID: 0.5703 | Loss OOD: -5.4393
+2024-06-16 05:02:17,365 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 8 | Loss: -1.9994 | Loss ID: 0.7384 | Loss OOD: -5.4756
+2024-06-16 05:02:18,049 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 9 | Loss: -1.6578 | Loss ID: 1.0784 | Loss OOD: -5.4724
+2024-06-16 05:02:18,732 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 10 | Loss: -2.3641 | Loss ID: 0.3690 | Loss OOD: -5.4662
+2024-06-16 05:02:19,414 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 11 | Loss: -1.7041 | Loss ID: 1.0144 | Loss OOD: -5.4371
+2024-06-16 05:02:20,096 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 12 | Loss: -2.1364 | Loss ID: 0.6229 | Loss OOD: -5.5186
+2024-06-16 05:02:20,779 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 13 | Loss: -2.2329 | Loss ID: 0.4919 | Loss OOD: -5.4495
+2024-06-16 05:02:21,461 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 14 | Loss: -1.4085 | Loss ID: 1.3290 | Loss OOD: -5.4750
+2024-06-16 05:02:22,144 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 15 | Loss: -2.2487 | Loss ID: 0.5261 | Loss OOD: -5.5495
+2024-06-16 05:02:22,827 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 16 | Loss: -1.7796 | Loss ID: 0.9641 | Loss OOD: -5.4872
+2024-06-16 05:02:23,512 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 17 | Loss: -2.0766 | Loss ID: 0.6947 | Loss OOD: -5.5427
+2024-06-16 05:02:24,195 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 18 | Loss: -1.7848 | Loss ID: 0.9854 | Loss OOD: -5.5403
+2024-06-16 05:02:24,880 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 19 | Loss: -2.3814 | Loss ID: 0.4075 | Loss OOD: -5.5778
+2024-06-16 05:02:25,563 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 20 | Loss: -1.8140 | Loss ID: 0.9539 | Loss OOD: -5.5359
+2024-06-16 05:02:26,247 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 21 | Loss: -1.7592 | Loss ID: 1.0005 | Loss OOD: -5.5195
+2024-06-16 05:02:26,930 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 22 | Loss: -1.7360 | Loss ID: 1.0515 | Loss OOD: -5.5750
+2024-06-16 05:02:27,613 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 23 | Loss: -2.1802 | Loss ID: 0.6293 | Loss OOD: -5.6189
+2024-06-16 05:02:28,296 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 24 | Loss: -1.8965 | Loss ID: 0.9147 | Loss OOD: -5.6223
+2024-06-16 05:02:28,979 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 25 | Loss: -2.1391 | Loss ID: 0.6583 | Loss OOD: -5.5949
+2024-06-16 05:02:29,662 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 26 | Loss: -2.3573 | Loss ID: 0.4332 | Loss OOD: -5.5810
+2024-06-16 05:02:30,345 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 27 | Loss: -1.7070 | Loss ID: 1.0627 | Loss OOD: -5.5393
+2024-06-16 05:02:31,027 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 28 | Loss: -2.1238 | Loss ID: 0.6749 | Loss OOD: -5.5975
+2024-06-16 05:02:31,709 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 29 | Loss: -1.8420 | Loss ID: 0.9285 | Loss OOD: -5.5411
+2024-06-16 05:02:32,393 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 30 | Loss: -2.0199 | Loss ID: 0.7963 | Loss OOD: -5.6323
+2024-06-16 05:02:33,078 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 31 | Loss: -1.9779 | Loss ID: 0.8384 | Loss OOD: -5.6325
+2024-06-16 05:02:33,761 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 32 | Loss: -2.4551 | Loss ID: 0.3461 | Loss OOD: -5.6022
+2024-06-16 05:02:34,446 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 33 | Loss: -2.1526 | Loss ID: 0.6730 | Loss OOD: -5.6513
+2024-06-16 05:02:35,130 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 34 | Loss: -1.9519 | Loss ID: 0.8445 | Loss OOD: -5.5929
+2024-06-16 05:02:35,816 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 35 | Loss: -2.2296 | Loss ID: 0.5903 | Loss OOD: -5.6396
+2024-06-16 05:02:36,499 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 36 | Loss: -1.7481 | Loss ID: 1.0782 | Loss OOD: -5.6525
+2024-06-16 05:02:37,181 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 37 | Loss: -2.1427 | Loss ID: 0.7126 | Loss OOD: -5.7108
+2024-06-16 05:02:37,865 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 38 | Loss: -2.2212 | Loss ID: 0.6168 | Loss OOD: -5.6760
+2024-06-16 05:02:38,549 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 39 | Loss: -1.8311 | Loss ID: 0.9936 | Loss OOD: -5.6495
+2024-06-16 05:02:39,234 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 40 | Loss: -1.6483 | Loss ID: 1.1647 | Loss OOD: -5.6260
+2024-06-16 05:02:39,918 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 41 | Loss: -2.1332 | Loss ID: 0.6872 | Loss OOD: -5.6407
+2024-06-16 05:02:40,601 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 42 | Loss: -2.0572 | Loss ID: 0.7903 | Loss OOD: -5.6951
+2024-06-16 05:02:41,286 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 43 | Loss: -1.7931 | Loss ID: 1.0364 | Loss OOD: -5.6589
+2024-06-16 05:02:41,970 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 44 | Loss: -1.7770 | Loss ID: 1.0422 | Loss OOD: -5.6385
+2024-06-16 05:02:42,654 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 45 | Loss: -1.5315 | Loss ID: 1.2891 | Loss OOD: -5.6412
+2024-06-16 05:02:43,339 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 46 | Loss: -1.8607 | Loss ID: 0.9542 | Loss OOD: -5.6297
+2024-06-16 05:02:44,022 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 47 | Loss: -1.1823 | Loss ID: 1.6578 | Loss OOD: -5.6801
+2024-06-16 05:02:44,707 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 48 | Loss: -1.7475 | Loss ID: 1.0989 | Loss OOD: -5.6928
+2024-06-16 05:02:45,454 | INFO | finetune.py:158 | run_finetune | Epoch 2 | Step 49 | Loss: -2.1150 | Loss ID: 0.7666 | Loss OOD: -5.7632
+2024-06-16 05:02:46,499 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 0 | Loss: -1.7105 | Loss ID: 1.1052 | Loss OOD: -5.6313
+2024-06-16 05:02:47,182 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 1 | Loss: -2.1908 | Loss ID: 0.6795 | Loss OOD: -5.7406
+2024-06-16 05:02:47,865 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 2 | Loss: -2.0959 | Loss ID: 0.7541 | Loss OOD: -5.7000
+2024-06-16 05:02:48,549 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 3 | Loss: -1.8098 | Loss ID: 1.0635 | Loss OOD: -5.7466
+2024-06-16 05:02:49,234 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 4 | Loss: -1.5821 | Loss ID: 1.2607 | Loss OOD: -5.6857
+2024-06-16 05:02:49,918 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 5 | Loss: -1.7627 | Loss ID: 1.1073 | Loss OOD: -5.7400
+2024-06-16 05:02:50,602 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 6 | Loss: -1.8518 | Loss ID: 1.0213 | Loss OOD: -5.7462
+2024-06-16 05:02:51,286 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 7 | Loss: -2.0219 | Loss ID: 0.8563 | Loss OOD: -5.7565
+2024-06-16 05:02:51,970 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 8 | Loss: -2.0911 | Loss ID: 0.7879 | Loss OOD: -5.7579
+2024-06-16 05:02:52,657 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 9 | Loss: -1.8379 | Loss ID: 1.0364 | Loss OOD: -5.7487
+2024-06-16 05:02:53,342 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 10 | Loss: -1.3541 | Loss ID: 1.5103 | Loss OOD: -5.7287
+2024-06-16 05:02:54,027 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 11 | Loss: -2.2716 | Loss ID: 0.6006 | Loss OOD: -5.7445
+2024-06-16 05:02:54,711 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 12 | Loss: -2.1043 | Loss ID: 0.7728 | Loss OOD: -5.7542
+2024-06-16 05:02:55,395 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 13 | Loss: -1.9451 | Loss ID: 0.9353 | Loss OOD: -5.7607
+2024-06-16 05:02:56,078 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 14 | Loss: -2.2062 | Loss ID: 0.6592 | Loss OOD: -5.7307
+2024-06-16 05:02:56,761 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 15 | Loss: -2.1400 | Loss ID: 0.7407 | Loss OOD: -5.7615
+2024-06-16 05:02:57,450 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 16 | Loss: -2.0365 | Loss ID: 0.8575 | Loss OOD: -5.7879
+2024-06-16 05:02:58,134 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 17 | Loss: -2.3190 | Loss ID: 0.5533 | Loss OOD: -5.7446
+2024-06-16 05:02:58,818 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 18 | Loss: -1.9230 | Loss ID: 0.9690 | Loss OOD: -5.7840
+2024-06-16 05:02:59,502 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 19 | Loss: -1.7666 | Loss ID: 1.1401 | Loss OOD: -5.8133
+2024-06-16 05:03:00,186 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 20 | Loss: -2.0724 | Loss ID: 0.7969 | Loss OOD: -5.7385
+2024-06-16 05:03:00,870 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 21 | Loss: -2.2408 | Loss ID: 0.6402 | Loss OOD: -5.7621
+2024-06-16 05:03:01,553 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 22 | Loss: -1.9354 | Loss ID: 0.9445 | Loss OOD: -5.7598
+2024-06-16 05:03:02,237 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 23 | Loss: -2.0285 | Loss ID: 0.8237 | Loss OOD: -5.7043
+2024-06-16 05:03:02,920 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 24 | Loss: -1.9701 | Loss ID: 0.9154 | Loss OOD: -5.7711
+2024-06-16 05:03:03,604 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 25 | Loss: -1.8568 | Loss ID: 1.0346 | Loss OOD: -5.7829
+2024-06-16 05:03:04,287 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 26 | Loss: -1.8424 | Loss ID: 1.0635 | Loss OOD: -5.8119
+2024-06-16 05:03:04,972 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 27 | Loss: -2.2863 | Loss ID: 0.6054 | Loss OOD: -5.7834
+2024-06-16 05:03:05,658 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 28 | Loss: -2.3311 | Loss ID: 0.5631 | Loss OOD: -5.7883
+2024-06-16 05:03:06,341 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 29 | Loss: -2.2967 | Loss ID: 0.5919 | Loss OOD: -5.7772
+2024-06-16 05:03:07,026 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 30 | Loss: -2.2573 | Loss ID: 0.6023 | Loss OOD: -5.7192
+2024-06-16 05:03:07,711 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 31 | Loss: -2.2143 | Loss ID: 0.6828 | Loss OOD: -5.7944
+2024-06-16 05:03:08,395 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 32 | Loss: -1.7882 | Loss ID: 1.1067 | Loss OOD: -5.7899
+2024-06-16 05:03:09,080 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 33 | Loss: -2.0780 | Loss ID: 0.8260 | Loss OOD: -5.8079
+2024-06-16 05:03:09,763 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 34 | Loss: -1.9910 | Loss ID: 0.8798 | Loss OOD: -5.7417
+2024-06-16 05:03:10,446 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 35 | Loss: -1.9435 | Loss ID: 0.9700 | Loss OOD: -5.8271
+2024-06-16 05:03:11,130 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 36 | Loss: -2.1033 | Loss ID: 0.7787 | Loss OOD: -5.7640
+2024-06-16 05:03:11,814 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 37 | Loss: -2.0462 | Loss ID: 0.8598 | Loss OOD: -5.8121
+2024-06-16 05:03:12,498 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 38 | Loss: -2.1847 | Loss ID: 0.6841 | Loss OOD: -5.7375
+2024-06-16 05:03:13,182 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 39 | Loss: -2.3192 | Loss ID: 0.5780 | Loss OOD: -5.7945
+2024-06-16 05:03:13,869 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 40 | Loss: -2.0624 | Loss ID: 0.8303 | Loss OOD: -5.7854
+2024-06-16 05:03:14,552 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 41 | Loss: -1.6626 | Loss ID: 1.2251 | Loss OOD: -5.7755
+2024-06-16 05:03:15,237 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 42 | Loss: -2.4132 | Loss ID: 0.5020 | Loss OOD: -5.8305
+2024-06-16 05:03:15,920 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 43 | Loss: -2.2921 | Loss ID: 0.6037 | Loss OOD: -5.7916
+2024-06-16 05:03:16,605 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 44 | Loss: -2.0403 | Loss ID: 0.8313 | Loss OOD: -5.7432
+2024-06-16 05:03:17,290 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 45 | Loss: -2.6062 | Loss ID: 0.3032 | Loss OOD: -5.8187
+2024-06-16 05:03:17,974 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 46 | Loss: -2.4536 | Loss ID: 0.4507 | Loss OOD: -5.8085
+2024-06-16 05:03:18,659 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 47 | Loss: -1.5276 | Loss ID: 1.3566 | Loss OOD: -5.7684
+2024-06-16 05:03:19,342 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 48 | Loss: -2.0097 | Loss ID: 0.8734 | Loss OOD: -5.7663
+2024-06-16 05:03:20,097 | INFO | finetune.py:158 | run_finetune | Epoch 3 | Step 49 | Loss: -2.0779 | Loss ID: 0.8157 | Loss OOD: -5.7871
+2024-06-16 05:03:21,142 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 0 | Loss: -1.8679 | Loss ID: 0.9986 | Loss OOD: -5.7330
+2024-06-16 05:03:21,825 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 1 | Loss: -2.2477 | Loss ID: 0.6620 | Loss OOD: -5.8193
+2024-06-16 05:03:22,510 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 2 | Loss: -2.0507 | Loss ID: 0.8585 | Loss OOD: -5.8185
+2024-06-16 05:03:23,194 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 3 | Loss: -1.7044 | Loss ID: 1.2017 | Loss OOD: -5.8122
+2024-06-16 05:03:23,879 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 4 | Loss: -2.3161 | Loss ID: 0.5382 | Loss OOD: -5.7087
+2024-06-16 05:03:24,562 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 5 | Loss: -2.1115 | Loss ID: 0.7988 | Loss OOD: -5.8205
+2024-06-16 05:03:25,247 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 6 | Loss: -2.1927 | Loss ID: 0.7152 | Loss OOD: -5.8158
+2024-06-16 05:03:25,931 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 7 | Loss: -1.3120 | Loss ID: 1.5924 | Loss OOD: -5.8088
+2024-06-16 05:03:26,616 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 8 | Loss: -2.2104 | Loss ID: 0.7062 | Loss OOD: -5.8332
+2024-06-16 05:03:27,299 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 9 | Loss: -2.3657 | Loss ID: 0.5534 | Loss OOD: -5.8383
+2024-06-16 05:03:27,982 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 10 | Loss: -1.9352 | Loss ID: 0.9604 | Loss OOD: -5.7911
+2024-06-16 05:03:28,666 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 11 | Loss: -1.8016 | Loss ID: 1.1099 | Loss OOD: -5.8229
+2024-06-16 05:03:29,350 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 12 | Loss: -2.3845 | Loss ID: 0.4977 | Loss OOD: -5.7644
+2024-06-16 05:03:30,033 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 13 | Loss: -1.9036 | Loss ID: 0.9759 | Loss OOD: -5.7590
+2024-06-16 05:03:30,718 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 14 | Loss: -2.5129 | Loss ID: 0.4077 | Loss OOD: -5.8412
+2024-06-16 05:03:31,402 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 15 | Loss: -2.4238 | Loss ID: 0.5049 | Loss OOD: -5.8574
+2024-06-16 05:03:32,086 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 16 | Loss: -1.7570 | Loss ID: 1.1222 | Loss OOD: -5.7584
+2024-06-16 05:03:32,771 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 17 | Loss: -1.4480 | Loss ID: 1.4366 | Loss OOD: -5.7692
+2024-06-16 05:03:33,455 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 18 | Loss: -1.8869 | Loss ID: 1.0224 | Loss OOD: -5.8185
+2024-06-16 05:03:34,139 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 19 | Loss: -1.9306 | Loss ID: 0.9477 | Loss OOD: -5.7568
+2024-06-16 05:03:34,825 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 20 | Loss: -2.2524 | Loss ID: 0.6622 | Loss OOD: -5.8294
+2024-06-16 05:03:35,509 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 21 | Loss: -2.0143 | Loss ID: 0.8975 | Loss OOD: -5.8234
+2024-06-16 05:03:36,192 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 22 | Loss: -2.2054 | Loss ID: 0.7005 | Loss OOD: -5.8118
+2024-06-16 05:03:36,878 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 23 | Loss: -2.0879 | Loss ID: 0.8230 | Loss OOD: -5.8218
+2024-06-16 05:03:37,564 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 24 | Loss: -2.2228 | Loss ID: 0.6846 | Loss OOD: -5.8147
+2024-06-16 05:03:38,249 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 25 | Loss: -2.1619 | Loss ID: 0.7451 | Loss OOD: -5.8139
+2024-06-16 05:03:38,935 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 26 | Loss: -1.9944 | Loss ID: 0.8982 | Loss OOD: -5.7852
+2024-06-16 05:03:39,622 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 27 | Loss: -2.0213 | Loss ID: 0.8751 | Loss OOD: -5.7926
+2024-06-16 05:03:40,308 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 28 | Loss: -2.4337 | Loss ID: 0.4723 | Loss OOD: -5.8122
+2024-06-16 05:03:40,995 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 29 | Loss: -1.9498 | Loss ID: 0.9534 | Loss OOD: -5.8066
+2024-06-16 05:03:41,678 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 30 | Loss: -2.5539 | Loss ID: 0.3621 | Loss OOD: -5.8320
+2024-06-16 05:03:42,364 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 31 | Loss: -2.1825 | Loss ID: 0.7261 | Loss OOD: -5.8173
+2024-06-16 05:03:43,049 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 32 | Loss: -2.4564 | Loss ID: 0.4503 | Loss OOD: -5.8135
+2024-06-16 05:03:43,732 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 33 | Loss: -1.5691 | Loss ID: 1.3181 | Loss OOD: -5.7744
+2024-06-16 05:03:44,415 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 34 | Loss: -2.4957 | Loss ID: 0.4315 | Loss OOD: -5.8543
+2024-06-16 05:03:45,100 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 35 | Loss: -2.1271 | Loss ID: 0.7752 | Loss OOD: -5.8046
+2024-06-16 05:03:45,787 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 36 | Loss: -2.3817 | Loss ID: 0.5266 | Loss OOD: -5.8165
+2024-06-16 05:03:46,472 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 37 | Loss: -1.9116 | Loss ID: 0.9690 | Loss OOD: -5.7612
+2024-06-16 05:03:47,157 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 38 | Loss: -2.1828 | Loss ID: 0.7300 | Loss OOD: -5.8256
+2024-06-16 05:03:47,843 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 39 | Loss: -2.1110 | Loss ID: 0.7883 | Loss OOD: -5.7986
+2024-06-16 05:03:48,525 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 40 | Loss: -1.8998 | Loss ID: 1.0062 | Loss OOD: -5.8122
+2024-06-16 05:03:49,211 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 41 | Loss: -1.7299 | Loss ID: 1.1663 | Loss OOD: -5.7925
+2024-06-16 05:03:49,896 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 42 | Loss: -1.6698 | Loss ID: 1.2340 | Loss OOD: -5.8075
+2024-06-16 05:03:50,581 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 43 | Loss: -2.3148 | Loss ID: 0.5894 | Loss OOD: -5.8084
+2024-06-16 05:03:51,266 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 44 | Loss: -1.7738 | Loss ID: 1.1402 | Loss OOD: -5.8278
+2024-06-16 05:03:51,950 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 45 | Loss: -2.2493 | Loss ID: 0.6286 | Loss OOD: -5.7559
+2024-06-16 05:03:52,635 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 46 | Loss: -1.9663 | Loss ID: 0.9356 | Loss OOD: -5.8038
+2024-06-16 05:03:53,319 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 47 | Loss: -2.3256 | Loss ID: 0.5804 | Loss OOD: -5.8120
+2024-06-16 05:03:54,004 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 48 | Loss: -2.3394 | Loss ID: 0.5598 | Loss OOD: -5.7983
+2024-06-16 05:03:54,752 | INFO | finetune.py:158 | run_finetune | Epoch 4 | Step 49 | Loss: -1.6709 | Loss ID: 1.2578 | Loss OOD: -5.8573
+2024-06-16 05:03:56,735 | INFO | finetune.py:182 | run_finetune | Model saved to ./results/finetune/clip_large/ID_ImageNet1K/LoRA/finetuned_model.pth
+2024-06-16 05:03:56,736 | INFO | finetune.py:187 | run_finetune | ############ Done! Finetune time: 2m 57s ############
+2024-06-16 05:03:56,746 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 05:03:56,746 | INFO | test_ood.py:30 | run_test_ood | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 05:03:57,248 | INFO | test_ood.py:45 | run_test_ood | Loading CLIP model weights from ./results/finetune/clip_large/ID_ImageNet1K/LoRA/finetuned_model.pth...
+2024-06-16 05:03:58,098 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 05:03:58,098 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 05:12:56,185 | INFO | model_hub.py:304 | compute_scores | Took 538.09 s to run.
+2024-06-16 05:12:56,356 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 05:12:56,356 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 05:14:44,828 | INFO | model_hub.py:304 | compute_scores | Took 108.47 s to run.
+2024-06-16 05:14:44,902 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - mcm_score
+2024-06-16 05:14:44,903 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:14:44,903 | INFO | metrics.py:57 | print_metrics | & 34.63 & 93.64 & 98.63
+2024-06-16 05:14:45,839 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - gl_mcm_score
+2024-06-16 05:14:45,839 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:14:45,839 | INFO | metrics.py:57 | print_metrics | & 41.16 & 91.94 & 98.19
+2024-06-16 05:14:46,652 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 05:14:46,653 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 05:16:35,769 | INFO | model_hub.py:304 | compute_scores | Took 109.12 s to run.
+2024-06-16 05:16:35,892 | INFO | metrics.py:55 | print_metrics | OOD_Sun - mcm_score
+2024-06-16 05:16:35,892 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:16:35,892 | INFO | metrics.py:57 | print_metrics | & 29.74 & 94.21 & 98.73
+2024-06-16 05:16:36,729 | INFO | metrics.py:55 | print_metrics | OOD_Sun - gl_mcm_score
+2024-06-16 05:16:36,730 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:16:36,730 | INFO | metrics.py:57 | print_metrics | & 31.87 & 93.84 & 98.60
+2024-06-16 05:16:37,522 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 05:16:37,522 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 05:18:26,049 | INFO | model_hub.py:304 | compute_scores | Took 108.53 s to run.
+2024-06-16 05:18:26,126 | INFO | metrics.py:55 | print_metrics | OOD_Places - mcm_score
+2024-06-16 05:18:26,126 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:18:26,126 | INFO | metrics.py:57 | print_metrics | & 36.44 & 91.60 & 97.92
+2024-06-16 05:18:26,999 | INFO | metrics.py:55 | print_metrics | OOD_Places - gl_mcm_score
+2024-06-16 05:18:26,999 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:18:26,999 | INFO | metrics.py:57 | print_metrics | & 39.54 & 90.80 & 97.68
+2024-06-16 05:18:27,839 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 05:18:27,840 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 05:19:29,339 | INFO | model_hub.py:304 | compute_scores | Took 61.5 s to run.
+2024-06-16 05:19:29,400 | INFO | metrics.py:55 | print_metrics | OOD_Texture - mcm_score
+2024-06-16 05:19:29,400 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:19:29,400 | INFO | metrics.py:57 | print_metrics | & 53.35 & 87.24 & 98.20
+2024-06-16 05:19:30,184 | INFO | metrics.py:55 | print_metrics | OOD_Texture - gl_mcm_score
+2024-06-16 05:19:30,184 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:19:30,184 | INFO | metrics.py:57 | print_metrics | & 61.10 & 82.59 & 97.35
+2024-06-16 05:19:30,838 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for mcm_score ############
+2024-06-16 05:19:30,841 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:19:30,842 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  34.63  93.64 98.63
+OOD_Sun          29.74  94.21 98.73
+OOD_Places       36.44  91.60 97.92
+OOD_Texture      53.35  87.24 98.20
+Avg              38.54  91.67 98.37
+2024-06-16 05:19:30,843 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/finetune/clip_large/ID_ImageNet1K/LoRA/metrics_mcm_score_test.csv
+2024-06-16 05:19:30,844 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:19:30,845 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.001078
+        OOD_Sun 0.001078
+     OOD_Places 0.001078
+    OOD_Texture 0.001078
+2024-06-16 05:19:30,845 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/finetune/clip_large/ID_ImageNet1K/LoRA/cutoffs_mcm_score_test.csv
+2024-06-16 05:19:30,845 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for gl_mcm_score ############
+2024-06-16 05:19:30,847 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:19:30,848 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  41.16  91.94 98.19
+OOD_Sun          31.87  93.84 98.60
+OOD_Places       39.54  90.80 97.68
+OOD_Texture      61.10  82.59 97.35
+Avg              43.42  89.79 97.95
+2024-06-16 05:19:30,848 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/finetune/clip_large/ID_ImageNet1K/LoRA/metrics_gl_mcm_score_test.csv
+2024-06-16 05:19:30,848 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:19:30,849 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset  Cutoff
+OOD_iNaturalist 0.00217
+        OOD_Sun 0.00217
+     OOD_Places 0.00217
+    OOD_Texture 0.00217
+2024-06-16 05:19:30,849 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/finetune/clip_large/ID_ImageNet1K/LoRA/cutoffs_gl_mcm_score_test.csv
+2024-06-16 05:19:30,849 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 15m 34s ############
+2024-06-16 05:19:30,849 | INFO | test_classify.py:121 | run_test_classify | ############ Test Classification ############
+2024-06-16 05:19:30,850 | INFO | test_classify.py:122 | run_test_classify | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 05:19:31,572 | INFO | test_classify.py:137 | run_test_classify | Loading clip model weights from ./results/finetune/clip_large/ID_ImageNet1K/LoRA/finetuned_model.pth...
+2024-06-16 05:19:32,304 | INFO | test_classify.py:151 | run_test_classify | ############ ID_ImageNet1K ############
+2024-06-16 05:36:10,387 | INFO | test_classify.py:161 | run_test_classify | Accuracy on ID_ImageNet1K: 71.55
+2024-06-16 05:36:10,387 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Sun ############
+2024-06-16 05:37:57,356 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Sun: 76.54
+2024-06-16 05:37:57,356 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Places ############
+2024-06-16 05:39:48,105 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Places: 47.90
+2024-06-16 05:39:48,105 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Texture ############
+2024-06-16 05:40:51,008 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Texture: 53.12
+2024-06-16 05:40:51,008 | INFO | test_classify.py:164 | run_test_classify | ############ Summary ############
+2024-06-16 05:40:51,008 | INFO | test_classify.py:166 | run_test_classify | Accuracy on ID_ImageNet1K: 71.55
+2024-06-16 05:40:51,008 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Sun: 76.54
+2024-06-16 05:40:51,008 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Places: 47.90
+2024-06-16 05:40:51,008 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Texture: 53.12

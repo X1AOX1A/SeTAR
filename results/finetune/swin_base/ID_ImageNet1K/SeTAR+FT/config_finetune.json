@@ -1,0 +1,255 @@
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "val",
+    "batch_size": 50,
+    "seed": 5,
+    "device": "cuda",
+    "exp_name": "SeTAR+FT",
+    "log_directory": "./results/finetune/swin_base/ID_ImageNet1K/SeTAR+FT",
+    "scorers": [
+        "mcm_score",
+        "gl_mcm_score"
+    ],
+    "temperature": 100,
+    "recall_level": 0.95,
+    "model_name": "microsoft/swinv2-base-patch4-window16-256",
+    "model_type": "SwinTransformerV2",
+    "clip_ckpt": null,
+    "locoop_ckpt": null,
+    "lora_svd_init": true,
+    "lora_svd_init_type": "small",
+    "lora_settings": [
+        [
+            "visual",
+            "W_up",
+            [
+                3,
+                1
+            ],
+            0.4
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                3,
+                0
+            ],
+            0.4
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                17
+            ],
+            0.4
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                16
+            ],
+            0.4
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                15
+            ],
+            0.4
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                14
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                13
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                12
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                11
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                10
+            ],
+            0.1
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                9
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                8
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                7
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                6
+            ],
+            0.25
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                5
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                4
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                3
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                2
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                1
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                2,
+                0
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                1,
+                1
+            ],
+            0.4
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                1,
+                0
+            ],
+            0.3
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                0,
+                1
+            ],
+            0
+        ],
+        [
+            "visual",
+            "W_up",
+            [
+                0,
+                0
+            ],
+            0.1
+        ]
+    ],
+    "target_modules": null,
+    "lora_r": null,
+    "lora_alpha": null,
+    "n_ctx": 16,
+    "num_train_epochs": 5,
+    "max_train_steps": null,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0005,
+    "momentum": 0.9,
+    "lr_scheduler_type": "cosine",
+    "num_warmup_steps": 0,
+    "locoop_lambda": 0.01,
+    "locoop_top_k": 700,
+    "logging_steps": 1
+}

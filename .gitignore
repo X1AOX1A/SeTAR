@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.history/
+core
+logs/
+wandb/
+
+#Mac
+.DS_Store
+
+# PEP 582
+__pypackages__/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+build/
+*egg-info/
+
+# Debug
+debug/
+debug*
+
+.idea/
+.vscode/
+.trash/
+.ipynb_checkpoints
+
+.TaskManager/
+*.pth
+results/weight_type_plot/*

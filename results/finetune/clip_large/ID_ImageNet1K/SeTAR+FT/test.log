@@ -1,0 +1,97 @@
+2024-06-16 05:12:42,494 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 05:12:42,495 | INFO | test_ood.py:30 | run_test_ood | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 05:12:43,050 | INFO | test_ood.py:45 | run_test_ood | Loading CLIP model weights from ./results/finetune/clip_large/ID_ImageNet1K/SeTAR+FT/finetuned_model.pth...
+2024-06-16 05:12:43,960 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 05:12:43,960 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 05:21:39,890 | INFO | model_hub.py:304 | compute_scores | Took 535.93 s to run.
+2024-06-16 05:21:40,065 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 05:21:40,065 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 05:23:28,492 | INFO | model_hub.py:304 | compute_scores | Took 108.43 s to run.
+2024-06-16 05:23:28,579 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - mcm_score
+2024-06-16 05:23:28,579 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:23:28,579 | INFO | metrics.py:57 | print_metrics | & 21.66 & 95.95 & 99.13
+2024-06-16 05:23:29,487 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - gl_mcm_score
+2024-06-16 05:23:29,487 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:23:29,487 | INFO | metrics.py:57 | print_metrics | & 35.48 & 92.28 & 98.23
+2024-06-16 05:23:30,172 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 05:23:30,172 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 05:25:19,282 | INFO | model_hub.py:304 | compute_scores | Took 109.11 s to run.
+2024-06-16 05:25:19,363 | INFO | metrics.py:55 | print_metrics | OOD_Sun - mcm_score
+2024-06-16 05:25:19,363 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:25:19,363 | INFO | metrics.py:57 | print_metrics | & 39.64 & 92.22 & 98.20
+2024-06-16 05:25:20,246 | INFO | metrics.py:55 | print_metrics | OOD_Sun - gl_mcm_score
+2024-06-16 05:25:20,246 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:25:20,246 | INFO | metrics.py:57 | print_metrics | & 34.51 & 93.25 & 98.45
+2024-06-16 05:25:20,980 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 05:25:20,980 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 05:27:09,429 | INFO | model_hub.py:304 | compute_scores | Took 108.45 s to run.
+2024-06-16 05:27:09,508 | INFO | metrics.py:55 | print_metrics | OOD_Places - mcm_score
+2024-06-16 05:27:09,508 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:27:09,508 | INFO | metrics.py:57 | print_metrics | & 47.04 & 89.71 & 97.50
+2024-06-16 05:27:10,318 | INFO | metrics.py:55 | print_metrics | OOD_Places - gl_mcm_score
+2024-06-16 05:27:10,319 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:27:10,319 | INFO | metrics.py:57 | print_metrics | & 42.85 & 90.30 & 97.57
+2024-06-16 05:27:11,059 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 05:27:11,060 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 05:28:12,739 | INFO | model_hub.py:304 | compute_scores | Took 61.68 s to run.
+2024-06-16 05:28:12,800 | INFO | metrics.py:55 | print_metrics | OOD_Texture - mcm_score
+2024-06-16 05:28:12,801 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:28:12,801 | INFO | metrics.py:57 | print_metrics | & 32.84 & 93.14 & 99.10
+2024-06-16 05:28:13,514 | INFO | metrics.py:55 | print_metrics | OOD_Texture - gl_mcm_score
+2024-06-16 05:28:13,514 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:28:13,514 | INFO | metrics.py:57 | print_metrics | & 37.61 & 91.25 & 98.75
+2024-06-16 05:28:14,170 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for mcm_score ############
+2024-06-16 05:28:14,174 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:28:14,176 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  21.66  95.95 99.13
+OOD_Sun          39.64  92.22 98.20
+OOD_Places       47.04  89.71 97.50
+OOD_Texture      32.84  93.14 99.10
+Avg              35.29  92.76 98.48
+2024-06-16 05:28:14,176 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/finetune/clip_large/ID_ImageNet1K/SeTAR+FT/metrics_mcm_score_test.csv
+2024-06-16 05:28:14,177 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:28:14,178 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.001105
+        OOD_Sun 0.001105
+     OOD_Places 0.001105
+    OOD_Texture 0.001105
+2024-06-16 05:28:14,178 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/finetune/clip_large/ID_ImageNet1K/SeTAR+FT/cutoffs_mcm_score_test.csv
+2024-06-16 05:28:14,178 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for gl_mcm_score ############
+2024-06-16 05:28:14,180 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:28:14,181 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  35.48  92.28 98.23
+OOD_Sun          34.51  93.25 98.45
+OOD_Places       42.85  90.30 97.57
+OOD_Texture      37.61  91.25 98.75
+Avg              37.61  91.77 98.25
+2024-06-16 05:28:14,181 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/finetune/clip_large/ID_ImageNet1K/SeTAR+FT/metrics_gl_mcm_score_test.csv
+2024-06-16 05:28:14,181 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:28:14,182 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.002167
+        OOD_Sun 0.002167
+     OOD_Places 0.002167
+    OOD_Texture 0.002167
+2024-06-16 05:28:14,182 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/finetune/clip_large/ID_ImageNet1K/SeTAR+FT/cutoffs_gl_mcm_score_test.csv
+2024-06-16 05:28:14,182 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 15m 32s ############
+2024-06-16 05:28:14,183 | INFO | test_classify.py:121 | run_test_classify | ############ Test Classification ############
+2024-06-16 05:28:14,183 | INFO | test_classify.py:122 | run_test_classify | Loading CLIP model: openai/clip-vit-large-patch14...
+2024-06-16 05:28:14,915 | INFO | test_classify.py:137 | run_test_classify | Loading clip model weights from ./results/finetune/clip_large/ID_ImageNet1K/SeTAR+FT/finetuned_model.pth...
+2024-06-16 05:28:16,023 | INFO | test_classify.py:151 | run_test_classify | ############ ID_ImageNet1K ############
+2024-06-16 05:44:50,166 | INFO | test_classify.py:161 | run_test_classify | Accuracy on ID_ImageNet1K: 71.35
+2024-06-16 05:44:50,167 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Sun ############
+2024-06-16 05:46:36,810 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Sun: 78.07
+2024-06-16 05:46:36,811 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Places ############
+2024-06-16 05:48:26,902 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Places: 47.15
+2024-06-16 05:48:26,902 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Texture ############
+2024-06-16 05:49:29,624 | INFO | test_classify.py:161 | run_test_classify | Accuracy on OOD_Texture: 53.30
+2024-06-16 05:49:29,624 | INFO | test_classify.py:164 | run_test_classify | ############ Summary ############
+2024-06-16 05:49:29,624 | INFO | test_classify.py:166 | run_test_classify | Accuracy on ID_ImageNet1K: 71.35
+2024-06-16 05:49:29,624 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Sun: 78.07
+2024-06-16 05:49:29,624 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Places: 47.15
+2024-06-16 05:49:29,624 | INFO | test_classify.py:166 | run_test_classify | Accuracy on OOD_Texture: 53.30

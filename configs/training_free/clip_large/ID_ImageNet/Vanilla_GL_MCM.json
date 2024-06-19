@@ -1,0 +1,15 @@
+{
+    "data_root": "/data/DATASETS/SVD_OOD",
+    "id_dataset": "ID_ImageNet1K",
+    "split": "test",
+    "batch_size": 512,
+    "seed": 5,
+    "device": "cuda",
+    "scorers": ["gl_mcm_score"],
+    "temperature": 100,
+    "exp_name": "Vanilla_GL_MCM",
+    "log_directory": "./results/training-free/clip_large/{args.id_dataset}/{args.exp_name}",
+    "recall_level": 0.95,
+    "model_name": "openai/clip-vit-large-patch14",
+    "model_type": "CLIP"
+}

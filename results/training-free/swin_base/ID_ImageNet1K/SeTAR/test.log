@@ -1,0 +1,243 @@
+2024-06-16 05:29:42,718 | INFO | test_ood.py:29 | run_test_ood | ############ Test OOD Detection ############
+2024-06-16 05:29:42,718 | INFO | test_ood.py:30 | run_test_ood | Loading SwinTransformerV2 model: microsoft/swinv2-base-patch4-window16-256...
+2024-06-16 05:29:43,148 | INFO | test_ood.py:39 | run_test_ood | Applying SVD prune to 'small' weights...
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.3.blocks.1.intermediate.dense] [rank(410)=round(full_rank(1024)*rank_ratio(0.4))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.3.blocks.0.intermediate.dense] [rank(410)=round(full_rank(1024)*rank_ratio(0.4))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.17.intermediate.dense] [rank(205)=round(full_rank(512)*rank_ratio(0.4))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.16.intermediate.dense] [rank(205)=round(full_rank(512)*rank_ratio(0.4))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.15.intermediate.dense] [rank(205)=round(full_rank(512)*rank_ratio(0.4))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.14.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.13.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.12.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.11.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.10.intermediate.dense] [rank(51)=round(full_rank(512)*rank_ratio(0.1))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.9.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,151 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.8.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.7.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.6.intermediate.dense] [rank(128)=round(full_rank(512)*rank_ratio(0.25))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.5.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.4.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.3.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.2.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.1.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.0.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.1.blocks.1.intermediate.dense] [rank(102)=round(full_rank(256)*rank_ratio(0.4))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.1.blocks.0.intermediate.dense] [rank(77)=round(full_rank(256)*rank_ratio(0.3))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.0.blocks.1.intermediate.dense] [rank(0)=round(full_rank(128)*rank_ratio(0))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.0.blocks.0.intermediate.dense] [rank(13)=round(full_rank(128)*rank_ratio(0.1))]
+2024-06-16 05:29:43,152 | INFO | model_hub.py:847 | to_target_modules | lora_settings -> target_modules: 
+{
+    "swinv2.encoder.layers.3.blocks.1.intermediate.dense": 410,
+    "swinv2.encoder.layers.3.blocks.0.intermediate.dense": 410,
+    "swinv2.encoder.layers.2.blocks.17.intermediate.dense": 205,
+    "swinv2.encoder.layers.2.blocks.16.intermediate.dense": 205,
+    "swinv2.encoder.layers.2.blocks.15.intermediate.dense": 205,
+    "swinv2.encoder.layers.2.blocks.14.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.13.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.12.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.11.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.10.intermediate.dense": 51,
+    "swinv2.encoder.layers.2.blocks.9.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.8.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.7.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.6.intermediate.dense": 128,
+    "swinv2.encoder.layers.2.blocks.5.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.4.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.3.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.2.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.1.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.0.intermediate.dense": 0,
+    "swinv2.encoder.layers.1.blocks.1.intermediate.dense": 102,
+    "swinv2.encoder.layers.1.blocks.0.intermediate.dense": 77,
+    "swinv2.encoder.layers.0.blocks.1.intermediate.dense": 0,
+    "swinv2.encoder.layers.0.blocks.0.intermediate.dense": 13
+}
+2024-06-16 05:29:43,172 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.3.blocks.1.intermediate.dense] [Rank: 410]
+2024-06-16 05:29:43,188 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.3.blocks.0.intermediate.dense] [Rank: 410]
+2024-06-16 05:29:43,193 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.17.intermediate.dense] [Rank: 205]
+2024-06-16 05:29:43,197 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.16.intermediate.dense] [Rank: 205]
+2024-06-16 05:29:43,202 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.15.intermediate.dense] [Rank: 205]
+2024-06-16 05:29:43,202 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.14.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,202 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.13.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,202 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.12.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,202 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.11.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,204 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.10.intermediate.dense] [Rank: 51]
+2024-06-16 05:29:43,204 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.9.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,204 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.8.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,204 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.7.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,207 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.6.intermediate.dense] [Rank: 128]
+2024-06-16 05:29:43,208 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.5.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,208 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.4.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,208 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.3.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,208 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.2.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,208 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.1.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,208 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.0.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,210 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.1.blocks.1.intermediate.dense] [Rank: 102]
+2024-06-16 05:29:43,211 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.1.blocks.0.intermediate.dense] [Rank: 77]
+2024-06-16 05:29:43,211 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.0.blocks.1.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:29:43,212 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.0.blocks.0.intermediate.dense] [Rank: 13]
+2024-06-16 05:29:43,426 | INFO | model.py:192 | svd_init | SVD initialized for adapter 'default'.
+2024-06-16 05:29:43,609 | INFO | test_ood.py:63 | run_test_ood | ############ ID dataset: ID_ImageNet1K, test set: 50000 images ############
+2024-06-16 05:29:43,609 | INFO | test_ood.py:65 | run_test_ood | Computing scores for ID_ImageNet1K...
+2024-06-16 05:33:28,424 | INFO | model_hub.py:711 | compute_scores | Took 224.81 s to run.
+2024-06-16 05:33:28,573 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_iNaturalist, test set: 10000 images ############
+2024-06-16 05:33:28,573 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_iNaturalist...
+2024-06-16 05:34:17,907 | INFO | model_hub.py:711 | compute_scores | Took 49.33 s to run.
+2024-06-16 05:34:17,974 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - mcm_score
+2024-06-16 05:34:17,974 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:34:17,974 | INFO | metrics.py:57 | print_metrics | & 41.44 & 91.08 & 97.73
+2024-06-16 05:34:18,866 | INFO | metrics.py:55 | print_metrics | OOD_iNaturalist - energy_score
+2024-06-16 05:34:18,866 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:34:18,866 | INFO | metrics.py:57 | print_metrics | & 41.71 & 89.42 & 96.68
+2024-06-16 05:34:19,694 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Sun, test set: 10000 images ############
+2024-06-16 05:34:19,694 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Sun...
+2024-06-16 05:35:10,691 | INFO | model_hub.py:711 | compute_scores | Took 51.0 s to run.
+2024-06-16 05:35:10,760 | INFO | metrics.py:55 | print_metrics | OOD_Sun - mcm_score
+2024-06-16 05:35:10,760 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:35:10,760 | INFO | metrics.py:57 | print_metrics | & 60.05 & 85.04 & 95.99
+2024-06-16 05:35:11,475 | INFO | metrics.py:55 | print_metrics | OOD_Sun - energy_score
+2024-06-16 05:35:11,475 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:35:11,475 | INFO | metrics.py:57 | print_metrics | & 56.53 & 83.29 & 94.69
+2024-06-16 05:35:12,231 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Places, test set: 10000 images ############
+2024-06-16 05:35:12,231 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Places...
+2024-06-16 05:36:00,261 | INFO | model_hub.py:711 | compute_scores | Took 48.03 s to run.
+2024-06-16 05:36:00,333 | INFO | metrics.py:55 | print_metrics | OOD_Places - mcm_score
+2024-06-16 05:36:00,333 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:36:00,333 | INFO | metrics.py:57 | print_metrics | & 64.31 & 83.70 & 95.78
+2024-06-16 05:36:01,044 | INFO | metrics.py:55 | print_metrics | OOD_Places - energy_score
+2024-06-16 05:36:01,044 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:36:01,044 | INFO | metrics.py:57 | print_metrics | & 62.84 & 80.20 & 93.77
+2024-06-16 05:36:01,777 | INFO | test_ood.py:78 | run_test_ood | ############ OOD dataset: OOD_Texture, test set: 5640 images ############
+2024-06-16 05:36:01,777 | INFO | test_ood.py:80 | run_test_ood | Computing scores for OOD_Texture...
+2024-06-16 05:36:29,705 | INFO | model_hub.py:711 | compute_scores | Took 27.93 s to run.
+2024-06-16 05:36:29,761 | INFO | metrics.py:55 | print_metrics | OOD_Texture - mcm_score
+2024-06-16 05:36:29,761 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:36:29,762 | INFO | metrics.py:57 | print_metrics | & 58.39 & 83.26 & 97.06
+2024-06-16 05:36:30,455 | INFO | metrics.py:55 | print_metrics | OOD_Texture - energy_score
+2024-06-16 05:36:30,455 | INFO | metrics.py:56 | print_metrics |   FPR95 AUROC AUPR
+2024-06-16 05:36:30,455 | INFO | metrics.py:57 | print_metrics | & 45.37 & 84.76 & 96.99
+2024-06-16 05:36:31,153 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for mcm_score ############
+2024-06-16 05:36:31,156 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:36:31,157 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  41.44  91.08 97.73
+OOD_Sun          60.05  85.04 95.99
+OOD_Places       64.31  83.70 95.78
+OOD_Texture      58.39  83.26 97.06
+Avg              56.05  85.77 96.64
+2024-06-16 05:36:31,157 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/training-free/swin_base/ID_ImageNet1K/SeTAR/metrics_mcm_score_test.csv
+2024-06-16 05:36:31,158 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:36:31,158 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 0.442905
+        OOD_Sun 0.442679
+     OOD_Places 0.442829
+    OOD_Texture 0.442657
+2024-06-16 05:36:31,158 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/training-free/swin_base/ID_ImageNet1K/SeTAR/cutoffs_mcm_score_test.csv
+2024-06-16 05:36:31,158 | INFO | test_ood.py:98 | run_test_ood | ############ Metrics for energy_score ############
+2024-06-16 05:36:31,160 | INFO | metrics.py:76 | save_metrics | ############ Mean metrics ############
+2024-06-16 05:36:31,161 | INFO | metrics.py:77 | save_metrics | 
+                 FPR95  AUROC  AUPR
+OOD dataset                        
+OOD_iNaturalist  41.71  89.42 96.68
+OOD_Sun          56.53  83.29 94.69
+OOD_Places       62.84  80.20 93.77
+OOD_Texture      45.37  84.76 96.99
+Avg              51.61  84.42 95.53
+2024-06-16 05:36:31,161 | INFO | metrics.py:78 | save_metrics | Metrics saved to ./results/training-free/swin_base/ID_ImageNet1K/SeTAR/metrics_energy_score_test.csv
+2024-06-16 05:36:31,162 | INFO | metrics.py:87 | save_cutoffs | ############ Thresholds Cut-off ############
+2024-06-16 05:36:31,162 | INFO | metrics.py:88 | save_cutoffs | 
+    OOD dataset   Cutoff
+OOD_iNaturalist 8.873389
+        OOD_Sun 8.873345
+     OOD_Places 8.873389
+    OOD_Texture 8.873389
+2024-06-16 05:36:31,163 | INFO | metrics.py:89 | save_cutoffs | Thresholds cutoff saved to ./results/training-free/swin_base/ID_ImageNet1K/SeTAR/cutoffs_energy_score_test.csv
+2024-06-16 05:36:31,163 | INFO | test_ood.py:107 | run_test_ood | ############ Done! Test time: 6m 48s ############
+2024-06-16 05:36:31,163 | INFO | test_classify.py:121 | run_test_classify | ############ Test Classification ############
+2024-06-16 05:36:31,163 | INFO | test_classify.py:122 | run_test_classify | Loading SwinTransformerV2 model: microsoft/swinv2-base-patch4-window16-256...
+2024-06-16 05:36:31,608 | INFO | test_classify.py:131 | run_test_classify | Applying SVD prune to 'small' weights...
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.3.blocks.1.intermediate.dense] [rank(410)=round(full_rank(1024)*rank_ratio(0.4))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.3.blocks.0.intermediate.dense] [rank(410)=round(full_rank(1024)*rank_ratio(0.4))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.17.intermediate.dense] [rank(205)=round(full_rank(512)*rank_ratio(0.4))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.16.intermediate.dense] [rank(205)=round(full_rank(512)*rank_ratio(0.4))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.15.intermediate.dense] [rank(205)=round(full_rank(512)*rank_ratio(0.4))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.14.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.13.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.12.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.11.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.10.intermediate.dense] [rank(51)=round(full_rank(512)*rank_ratio(0.1))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.9.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.8.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,611 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.7.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.6.intermediate.dense] [rank(128)=round(full_rank(512)*rank_ratio(0.25))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.5.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.4.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.3.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.2.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.1.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.2.blocks.0.intermediate.dense] [rank(0)=round(full_rank(512)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.1.blocks.1.intermediate.dense] [rank(102)=round(full_rank(256)*rank_ratio(0.4))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.1.blocks.0.intermediate.dense] [rank(77)=round(full_rank(256)*rank_ratio(0.3))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.0.blocks.1.intermediate.dense] [rank(0)=round(full_rank(128)*rank_ratio(0))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:843 | to_target_modules | [swinv2.encoder.layers.0.blocks.0.intermediate.dense] [rank(13)=round(full_rank(128)*rank_ratio(0.1))]
+2024-06-16 05:36:31,612 | INFO | model_hub.py:847 | to_target_modules | lora_settings -> target_modules: 
+{
+    "swinv2.encoder.layers.3.blocks.1.intermediate.dense": 410,
+    "swinv2.encoder.layers.3.blocks.0.intermediate.dense": 410,
+    "swinv2.encoder.layers.2.blocks.17.intermediate.dense": 205,
+    "swinv2.encoder.layers.2.blocks.16.intermediate.dense": 205,
+    "swinv2.encoder.layers.2.blocks.15.intermediate.dense": 205,
+    "swinv2.encoder.layers.2.blocks.14.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.13.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.12.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.11.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.10.intermediate.dense": 51,
+    "swinv2.encoder.layers.2.blocks.9.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.8.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.7.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.6.intermediate.dense": 128,
+    "swinv2.encoder.layers.2.blocks.5.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.4.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.3.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.2.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.1.intermediate.dense": 0,
+    "swinv2.encoder.layers.2.blocks.0.intermediate.dense": 0,
+    "swinv2.encoder.layers.1.blocks.1.intermediate.dense": 102,
+    "swinv2.encoder.layers.1.blocks.0.intermediate.dense": 77,
+    "swinv2.encoder.layers.0.blocks.1.intermediate.dense": 0,
+    "swinv2.encoder.layers.0.blocks.0.intermediate.dense": 13
+}
+2024-06-16 05:36:31,632 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.3.blocks.1.intermediate.dense] [Rank: 410]
+2024-06-16 05:36:31,648 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.3.blocks.0.intermediate.dense] [Rank: 410]
+2024-06-16 05:36:31,653 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.17.intermediate.dense] [Rank: 205]
+2024-06-16 05:36:31,658 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.16.intermediate.dense] [Rank: 205]
+2024-06-16 05:36:31,663 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.15.intermediate.dense] [Rank: 205]
+2024-06-16 05:36:31,663 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.14.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,663 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.13.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,663 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.12.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,663 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.11.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,664 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.10.intermediate.dense] [Rank: 51]
+2024-06-16 05:36:31,665 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.9.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,665 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.8.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,665 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.7.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,668 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.2.blocks.6.intermediate.dense] [Rank: 128]
+2024-06-16 05:36:31,668 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.5.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,668 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.4.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,668 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.3.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,668 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.2.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,668 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.1.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,668 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.2.blocks.0.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,670 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.1.blocks.1.intermediate.dense] [Rank: 102]
+2024-06-16 05:36:31,671 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.1.blocks.0.intermediate.dense] [Rank: 77]
+2024-06-16 05:36:31,671 | INFO | model.py:71 | inject_adapter | [swinv2.encoder.layers.0.blocks.1.intermediate.dense] [Rank: 0] [Skipped]
+2024-06-16 05:36:31,672 | INFO | model.py:78 | inject_adapter | [swinv2.encoder.layers.0.blocks.0.intermediate.dense] [Rank: 13]
+2024-06-16 05:36:31,897 | INFO | model.py:192 | svd_init | SVD initialized for adapter 'default'.
+2024-06-16 05:36:31,948 | INFO | test_classify.py:151 | run_test_classify | ############ ID_ImageNet1K ############
+2024-06-16 05:40:14,929 | INFO | test_classify.py:161 | run_test_classify | Accuracy on ID_ImageNet1K: 84.15
+2024-06-16 05:40:14,930 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Sun ############
+2024-06-16 05:40:14,930 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Places ############
+2024-06-16 05:40:14,930 | INFO | test_classify.py:151 | run_test_classify | ############ OOD_Texture ############
+2024-06-16 05:40:14,930 | INFO | test_classify.py:164 | run_test_classify | ############ Summary ############
+2024-06-16 05:40:14,930 | INFO | test_classify.py:166 | run_test_classify | Accuracy on ID_ImageNet1K: 84.15
