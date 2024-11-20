@@ -83,11 +83,12 @@ This project is licensed under the MIT License.
 If you find this code useful, please consider citing our paper:
 
 ```bibtex
-@misc{li2024setar,
-      title={SeTAR: Out-of-Distribution Detection with Selective Low-Rank Approximation},
-      author={Yixia Li and Boya Xiong and Guanhua Chen and Yun Chen},
-      year={2024},
-      eprint={2406.12629},
-      archivePrefix={arXiv}
+@inproceedings{
+  li2024setar,
+  title={Se{TAR}: Out-of-Distribution Detection with Selective Low-Rank Approximation},
+  author={Yixia Li and Boya Xiong and Guanhua Chen and Yun Chen},
+  booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+  year={2024},
+  url={https://openreview.net/forum?id=65UoJ0z7Kp}
 }
 ```
